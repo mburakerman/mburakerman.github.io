@@ -1,249 +1,256 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Mehmet Burak Erman - Front End Developer</title>
-<link rel="shortcut icon" href="data:image/x-icon;base64,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" type="image/x-icon" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Mehmet Burak Erman - Front End Developer</title>
+	<link rel="shortcut icon" href="data:image/x-icon;base64,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" type="image/x-icon" />
 
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 
-<meta name="google-site-verification" content="aq-2zJHO91H3IKfqqNZk7ea943I6pfKnBSbujkj_7pQ" />
+	<meta name="google-site-verification" content="aq-2zJHO91H3IKfqqNZk7ea943I6pfKnBSbujkj_7pQ" />
 
-<meta property="og:title" content="Mehmet Burak Erman - Front End Developer" />
-<meta property="og:description" content="Personal Portfolio Website" />
-<meta property="og:url"  content="https://mburakerman.github.io/">
-<meta property="og:type" content="website" />
+	<meta property="og:title" content="Mehmet Burak Erman - Front End Developer" />
+	<meta property="og:description" content="Personal Portfolio Website" />
+	<meta property="og:url"  content="https://mburakerman.github.io/">
+	<meta property="og:type" content="website" />
 
-<!-- Twitter -->
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:site" content="@mburakerman" />
-<meta name="twitter:creator" content="@mburakerman" />
-<meta name="twitter:title" content="Mehmet Burak Erman - Front End Developer">
-<meta name="twitter:description" content="Personal Portfolio Website" />
-<!-- Twitter --> 
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@mburakerman" />
+	<meta name="twitter:creator" content="@mburakerman" />
+	<meta name="twitter:title" content="Mehmet Burak Erman - Front End Developer">
+	<meta name="twitter:description" content="Personal Portfolio Website" />
+	<!-- Twitter --> 
 
-<style type="text/css">
-@import 'https://fonts.googleapis.com/css?family=Oxygen';
-* {
-padding: 0;
-margin: 0;
-text-decoration: none;
-list-style: none;
-letter-spacing: 1.2px;
-}
-body , html {
-max-width: 768px;
-height: 100%;
-margin: 0 auto;
-display: table;
-background:url("data:image/jpeg;base64,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");
-font-family: 'Oxygen', sans-serif;
-color:#d7d7d7;
-font-size: 2.2vh;
-padding: 1vh;
-overflow-y: hidden !important;
-}
-.page-wrapper {
-max-width: 768px;
-margin: 0 auto;
-display: table-cell;
-vertical-align: middle;
-}
-section h2 {
-color:#fff;
-margin-bottom: 1vh;
-border-bottom: 1px solid #1a1a1a;
-display: inline-block;
-font-size: 3vh;
-}
-.fa-caret-right {
-color:#fff;
-}
-section ul li {
-margin-bottom: 1vh;
-}
-.landing {
-margin-bottom: 2.2vh;
-border-bottom: 1px solid #1a1a1a;
-position: relative;
-}
-.landing h1 {
-position: relative;
-text-align: center;
-color:#fff;
-font-size: 4.5vh;
-width: 100%;
-margin:0;
-}
-.landing span {
-display: block;
-text-align: center;
-margin-left: auto;
-margin-right: auto;
-margin-bottom: 2.2vh;
-font-size: 1.5vh;
-}
-.projects-demos a {
-color:#fff;
-text-decoration: underline;
-}
-.projects-demos a:hover {
-color:#dfdfdf;
-}
-.about .cv a {
-color:#fff;
-text-decoration: underline;
-}
-.about .cv a:hover {
-color:#dfdfdf;
-}
-.contact {
-margin-top: 1vh;
-}
-.contact ul li {
-display: inline-block;
-margin-right:1vh;
-}
-.contact .fa {
-color:#fff;
-font-size: 3vh;
-}
-.contact .fa:hover {
--webkit-transform: scale(1.2);
--moz-transform: scale(1.2);
--o-transform: scale(1.2);
--ms-transform: scale(1.2);
-transform: scale(1.2);
-color:#dfdfdf;
-}
-footer {
-margin-top: 2.2vh;
-font-size: 1.3vh;
-border-top: 1px solid #1a1a1a;
-}
-footer span {
-float:left;
-margin-right: 1vh;
-margin-top: 2.2vh;
-}
-footer p {
-margin-top: 2.2vh;
-float:right;
-}
-</style>
+	<style type="text/css">
+		@import 'https://fonts.googleapis.com/css?family=Oxygen';
+		* {
+			padding: 0;
+			margin: 0;
+			text-decoration: none;
+			list-style: none;
+			letter-spacing: 1.2px;
+		}
+		body , html {
+			max-width: 768px;
+			height: 100%;
+			margin: 0 auto;
+			display: table;
+			background:#303034;
+			font-family: 'Oxygen', sans-serif;
+			color:#d7d7d7;
+			font-size: 15px;
+			padding: 1vh;
+			overflow-y: hidden !important;
+		}
+		.page-wrapper {
+			max-width: 768px;
+			margin: 0 auto;
+			display: table-cell;
+			vertical-align: middle;
+		}
+		section h2 {
+			color:#fff;
+			margin-bottom: 1vh;
+			border-bottom: 1px solid #686871;
+			display: inline-block;
+			font-size: 18px;
+		}
+		.fa-caret-right {
+			color:#fff;
+		}
+		section ul li {
+			margin-bottom: 1vh;
+		}
+		.landing {
+			margin-bottom: 2.2vh;
+			border-bottom: 1px solid #686871;
+			position: relative;
+		}
+		.landing h1 {
+			position: relative;
+			text-align: center;
+			color:#fff;
+			font-size: 30px;
+			width: 100%;
+			margin:0;
+		}
+		.landing span {
+			display: block;
+			text-align: center;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 2.2vh;
+			font-size: 12px;
+		}
+		.projects-demos {
+			margin-bottom: 20px;
+		}
+		.projects-demos a {
+			color:#fff;
+			text-decoration: underline;
+		}
+		.projects-demos a:hover {
+			color:#303034;
+			background: #dfdfdf;
+			text-decoration: none;
+		}
+		.about {
+			margin-bottom: 20px;	
+		}
+		.about .cv a {
+			color:#fff;
+			text-decoration: underline;
+		}
+		.about .cv a:hover {
+			color:#303034;
+			background: #dfdfdf;
+			text-decoration: none;
+		}
+		.contact ul li {
+			display: inline-block;
+			margin-right:1vh;
+		}
+		.contact .fa {
+			color:#fff;
+			font-size: 20px;
+		}
+		.contact .fa:hover {
+			-webkit-transform: scale(1.2);
+			-moz-transform: scale(1.2);
+			-o-transform: scale(1.2);
+			-ms-transform: scale(1.2);
+			transform: scale(1.2);
+			color:#dfdfdf;
+		}
+		footer {
+			margin-top: 2.2vh;
+			font-size: 10px;
+			border-top: 1px solid #686871;
+		}
+		footer span {
+			float:left;
+			margin-right: 1vh;
+			margin-top: 2.2vh;
+		}
+		footer p {
+			margin-top: 2.2vh;
+			float:right;
+		}
+	</style>
 </head>
 <body>
 
-<div class="page-wrapper"><!--page-wrapper-->
-<div class="container"><!--container-->
+	<div class="page-wrapper"><!--page-wrapper-->
+		<div class="container"><!--container-->
 
-<section class="landing">
-<h1>Mehmet Burak Erman </h1>
-<span>Front End Developer</span>
-</section>
+			<section class="landing">
+				<h1>Mehmet Burak Erman </h1>
+				<span>Front End Developer</span>
+			</section>
 
-<section class="projects-demos">
-<h2>PROJECTS-DEMOS</h2>  
-<ul>
-<li><i class="fa fa-caret-right" aria-hidden="true"></i> <a href="https://chrome.google.com/webstore/detail/basic-to-do-list/fgkmaedaobllmdjloggjhgkgndimmahi/" target="_blank" rel="external">Basic To-Do List</a> A very basic to-do list extension for Google Chrome.</li>
+			<section class="projects-demos">
+				<h2>PROJECTS-DEMOS</h2>  
+				<ul>
+					<li><i class="fa fa-caret-right" aria-hidden="true"></i> <a href="https://chrome.google.com/webstore/detail/basic-to-do-list/fgkmaedaobllmdjloggjhgkgndimmahi/" target="_blank" rel="external">Basic To-Do List</a> A very basic to-do list extension for Google Chrome.</li>
 
-<li><i class="fa fa-caret-right" aria-hidden="true"></i> <a href="https://mburakerman.github.io/toolgif/" target="_blank" rel="external">Toolgif</a> A very simple jQuery gif tooltip plugin.</li>
+					<li><i class="fa fa-caret-right" aria-hidden="true"></i> <a href="https://mburakerman.github.io/toolgif/" target="_blank" rel="external">Toolgif</a> A very simple jQuery gif tooltip plugin.</li>
 
-<li><i class="fa fa-caret-right" aria-hidden="true"></i> <a href="https://mburakerman.github.io/draweditor/" target="_blank" rel="external">Draweditor</a> Draweditor is a simple free online sketching, drawing, image editing tool.</li>
+					<li><i class="fa fa-caret-right" aria-hidden="true"></i> <a href="https://mburakerman.github.io/draweditor/" target="_blank" rel="external">Draweditor</a> Draweditor is a simple free online sketching, drawing, image editing tool.</li>
 
-<li><i class="fa fa-caret-right" aria-hidden="true"></i> <a href="https://mburakerman.github.io/prognroll/" target="_blank" rel="external">PrognRoll</a> A tiny, lightweight jQuery plugin that creates scroll progress bar on the page.</li>  
-  
-<li><i class="fa fa-caret-right" aria-hidden="true"></i> <a href="https://mburakerman.github.io/hangmanizr/" target="_blank" rel="external">Hangmanizr</a> Quick hangman game.</li>
+					<li><i class="fa fa-caret-right" aria-hidden="true"></i> <a href="https://mburakerman.github.io/prognroll/" target="_blank" rel="external">PrognRoll</a> A tiny, lightweight jQuery plugin that creates scroll progress bar on the page.</li>  
 
-<li><i class="fa fa-caret-right" aria-hidden="true"></i> <a href="https://mburakerman.github.io/memorizr/" target="_blank" rel="external">Memorizr</a> Animal pairs game.</li>
+					<li><i class="fa fa-caret-right" aria-hidden="true"></i> <a href="https://mburakerman.github.io/hangmanizr/" target="_blank" rel="external">Hangmanizr</a> Quick hangman game.</li>
 
-<li><i class="fa fa-caret-right" aria-hidden="true"></i> <a href="https://codepen.io/mburakerman/full/LkOqGp/" target="_blank" rel="external">Css3 Button Generator</a> Create your own custom button.</li>
+					<li><i class="fa fa-caret-right" aria-hidden="true"></i> <a href="https://mburakerman.github.io/memorizr/" target="_blank" rel="external">Memorizr</a> Animal pairs game.</li>
 
-<li><i class="fa fa-caret-right" aria-hidden="true"></i> <a href="http://istanbulpsikoloji.org/" target="_blank" rel="external">İstanbul Üniversitesi Psikoloji Kulübü</a> Official website of Istanbul University Psychology Club.</li>
+					<li><i class="fa fa-caret-right" aria-hidden="true"></i> <a href="https://codepen.io/mburakerman/full/LkOqGp/" target="_blank" rel="external">Css3 Button Generator</a> Create your own custom button.</li>
 
-<li><i class="fa fa-caret-right" aria-hidden="true"></i> <a href="https://mburakerman.github.io/runicorn/" target="_blank" rel="external">Runicorn</a> Mini obstacle game.</li>
+					<li><i class="fa fa-caret-right" aria-hidden="true"></i> <a href="http://istanbulpsikoloji.org/" target="_blank" rel="external">İstanbul Üniversitesi Psikoloji Kulübü</a> Official website of Istanbul University Psychology Club.</li>
 
-<li><i class="fa fa-caret-right" aria-hidden="true"></i> <a href="https://twitter.com/thememegifs/" target="_blank" rel="external">The Memegifs</a> This is my fun project.I am collecting my favorite gif edits and memes there.</li>
-</ul>
-</section>
+					<li><i class="fa fa-caret-right" aria-hidden="true"></i> <a href="https://mburakerman.github.io/runicorn/" target="_blank" rel="external">Runicorn</a> Mini obstacle game.</li>
 
-<section class="about">
-<h2>ABOUT</h2>    
-<ul>
-<li><i class="fa fa-caret-right" aria-hidden="true"></i> Born in 1994.</li>
-<li><i class="fa fa-caret-right" aria-hidden="true"></i> Graduated from Hacettepe University Economics.</li>
-<li><i class="fa fa-caret-right" aria-hidden="true"></i> After starting to learn web development, i wanted to be a Front End Developer and now love coding and following web trends day by day.</li>
-</ul>
-<span class="cv"><a href="https://drive.google.com/file/d/0B4AeLls7EjKsaDhnVnJpTmNjMFU/view?usp=sharing" target="_blank" rel="external">Viev my CV</a></span>
-</section>
+					<li><i class="fa fa-caret-right" aria-hidden="true"></i> <a href="https://twitter.com/thememegifs/" target="_blank" rel="external">The Memegifs</a> This is my fun project.I am collecting my favorite gif edits and memes there.</li>
+				</ul>
+			</section>
 
-<section class="contact">
-<h2>CONTACT</h2>
-<ul>
-<li>
-<a href="https://www.facebook.com/mburakerman/" title="Facebook" target="_blank" rel="external">
-<i class="fa fa-facebook" aria-hidden="true"></i>
-</a>
-</li>
+			<section class="about">
+				<h2>ABOUT</h2>    
+				<ul>
+					<li><i class="fa fa-caret-right" aria-hidden="true"></i> Born in 1994.</li>
+					<li><i class="fa fa-caret-right" aria-hidden="true"></i> Graduated from Hacettepe University Economics.</li>
+					<li><i class="fa fa-caret-right" aria-hidden="true"></i> After starting to learn web development, i wanted to be a Front End Developer and now love coding and following web trends day by day.</li>
+				</ul>
+				<span class="cv"><a href="https://drive.google.com/file/d/0B4AeLls7EjKsaDhnVnJpTmNjMFU/view?usp=sharing" target="_blank" rel="external">Viev my CV</a></span>
+			</section>
 
-<li>
-<a href="https://twitter.com/mburakerman" title="Twitter" target="_blank" rel="external">
-<i class="fa fa-twitter" aria-hidden="true"></i>
-</a>
-</li>
+			<section class="contact">
+				<h2>CONTACT</h2>
+				<ul>
+					<li>
+						<a href="https://www.facebook.com/mburakerman/" title="Facebook" target="_blank" rel="external">
+							<i class="fa fa-facebook" aria-hidden="true"></i>
+						</a>
+					</li>
 
-<li>
-<a href="https://www.instagram.com/mburakerman/" title="Instagram" target="_blank" rel="external">
-<i class="fa fa-instagram" aria-hidden="true"></i>
-</a>
-</li>
+					<li>
+						<a href="https://twitter.com/mburakerman" title="Twitter" target="_blank" rel="external">
+							<i class="fa fa-twitter" aria-hidden="true"></i>
+						</a>
+					</li>
 
-<li>
-<a href="https://codepen.io/mburakerman/" title="Codepen" target="_blank" rel="external">
-<i class="fa fa-codepen" aria-hidden="true"></i>
-</a>
-</li>
+					<li>
+						<a href="https://www.instagram.com/mburakerman/" title="Instagram" target="_blank" rel="external">
+							<i class="fa fa-instagram" aria-hidden="true"></i>
+						</a>
+					</li>
 
-<li>
-<a href="https://github.com/mburakerman" title="Github" target="_blank" rel="external">
-<i class="fa fa-github" aria-hidden="true"></i>
-</a>
-</li>
+					<li>
+						<a href="https://codepen.io/mburakerman/" title="Codepen" target="_blank" rel="external">
+							<i class="fa fa-codepen" aria-hidden="true"></i>
+						</a>
+					</li>
 
-<li>
-<a href="https://linkedin.com/in/mburakerman/" title="Linkedin" target="_blank" rel="external">
-<i class="fa fa-linkedin" aria-hidden="true"></i>
-</a>
-</li>
+					<li>
+						<a href="https://github.com/mburakerman" title="Github" target="_blank" rel="external">
+							<i class="fa fa-github" aria-hidden="true"></i>
+						</a>
+					</li>
 
-<li>
-<a href="mailto:mburakerman@gmail.com" title="Email" target="_blank" rel="external">
-<i class="fa fa-envelope-o" aria-hidden="true"></i>
-</a>
-</li>
-</ul>
-</section>
+					<li>
+						<a href="https://linkedin.com/in/mburakerman/" title="Linkedin" target="_blank" rel="external">
+							<i class="fa fa-linkedin" aria-hidden="true"></i>
+						</a>
+					</li>
 
-<footer>
-<span class="html5" title="HTML5"><i class="fa fa-html5" aria-hidden="true"></i></span>
-<span class="css3" title="CSS3"><i class="fa fa-css3" aria-hidden="true"></i></span>
-<p class="copyright">© 2017 Mehmet Burak Erman</p>
-</footer>
+					<li>
+						<a href="mailto:mburakerman@gmail.com" title="Email" target="_blank" rel="external">
+							<i class="fa fa-envelope-o" aria-hidden="true"></i>
+						</a>
+					</li>
+				</ul>
+			</section>
 
-</div><!--container-->
-</div><!--page-wrapper-->
+			<footer>
+				<span class="html5" title="HTML5"><i class="fa fa-html5" aria-hidden="true"></i></span>
+				<span class="css3" title="CSS3"><i class="fa fa-css3" aria-hidden="true"></i></span>
+				<p class="copyright">© 2017 Mehmet Burak Erman</p>
+			</footer>
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		</div><!--container-->
+	</div><!--page-wrapper-->
 
-  ga('create', 'UA-75826567-3', 'auto');
-  ga('send', 'pageview');
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-</script>
+		ga('create', 'UA-75826567-3', 'auto');
+		ga('send', 'pageview');
+
+	</script>
 </body>
 </html>
