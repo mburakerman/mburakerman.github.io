@@ -1,281 +1,469 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>Mehmet Burak Erman - Front End Developer</title>
-	<link rel="shortcut icon" href="data:image/x-icon;base64,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" type="image/x-icon" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Mehmet Burak Erman - Front End Developer</title>
+    <link rel="shortcut icon" href="data:image/x-icon;base64,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" type="image/x-icon" />
 
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <meta name="google-site-verification" content="aq-2zJHO91H3IKfqqNZk7ea943I6pfKnBSbujkj_7pQ" />
 
-	<meta name="google-site-verification" content="aq-2zJHO91H3IKfqqNZk7ea943I6pfKnBSbujkj_7pQ" />
+    <meta property="og:title" content="Mehmet Burak Erman - Front End Developer" />
+    <meta property="og:description" content="Personal Portfolio Website" />
+    <meta property="og:url" content="https://mburakerman.github.io/">
+    <meta property="og:type" content="website" />
 
-	<meta property="og:title" content="Mehmet Burak Erman - Front End Developer" />
-	<meta property="og:description" content="Personal Portfolio Website" />
-	<meta property="og:url"  content="https://mburakerman.github.io/">
-	<meta property="og:type" content="website" />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@mburakerman" />
+    <meta name="twitter:creator" content="@mburakerman" />
+    <meta name="twitter:title" content="Mehmet Burak Erman - Front End Developer">
+    <meta name="twitter:description" content="Personal Portfolio Website" />
+    <!-- Twitter -->
 
-	<!-- Twitter -->
-	<meta name="twitter:card" content="summary" />
-	<meta name="twitter:site" content="@mburakerman" />
-	<meta name="twitter:creator" content="@mburakerman" />
-	<meta name="twitter:title" content="Mehmet Burak Erman - Front End Developer">
-	<meta name="twitter:description" content="Personal Portfolio Website" />
-	<!-- Twitter --> 
-
-	<style type="text/css">
-		@import 'https://fonts.googleapis.com/css?family=Oxygen';
-		html {
-			-webkit-box-sizing: border-box;
-			-moz-box-sizing: border-box;
-			box-sizing: border-box;
-		}
-		*,
-		*:before,
-		*:after {
-			-webkit-box-sizing: inherit;
-			-moz-box-sizing: inherit;
-			box-sizing: inherit;
-			padding:0;
-			margin:0;
-			text-decoration: none;
-			list-style: none;
-			letter-spacing: 1.2px;
-		}
-		body , html {
-			max-width: 768px;
-			height: 100%;
-			margin: 0 auto;
-			display: table;
-			background:#303034;
-			font-family: 'Oxygen', sans-serif;
-			color:#d7d7d7;
-			font-size: 16px;
-			padding: 1.5%;
-			line-height:1.5;
-		}
-		.page-wrapper {
-			max-width: 768px;
-			margin: 0 auto;
-			display: table-cell;
-			vertical-align: middle;
-		}
-		section h2 {
-			color:#fff;
-			margin-bottom: 10px;
-			border-bottom: 1px solid #686871;
-			display: inline-block;
-			font-size: 20px;
-		}
-		.fa-caret-right {
-			color:#fff;
-		}
-		section ul li {
-			margin-bottom: 14px;
-		}
-		.landing {
-			margin-bottom: 20px;
-			border-bottom: 1px solid #686871;
-			position: relative;
-		}
-		.landing h1 {
-			position: relative;
-			text-align: center;
-			color:#fff;
-			font-size: 30px;
-			width: 100%;
-			margin:0;
-		}
-		.landing span {
-			display: block;
-			text-align: center;
-			margin-left: auto;
-			margin-right: auto;
-			margin-bottom: 20px;
-			font-size: 12px;
-		}
-		.projects-demos {
-			margin-bottom: 20px;
-		}
-		.projects-demos a {
-			color:#fff;
-			text-decoration: underline;
-		}
-		.projects-demos a:hover {
-			color:#303034;
-			background: #dfdfdf;
-			text-decoration: none;
-		}
-		.about {
-			margin-bottom: 20px;	
-		}
-		.about .cv a {
-			color:#fff;
-			text-decoration: underline;
-		}
-		.about .cv a:hover {
-			color:#303034;
-			background: #dfdfdf;
-			text-decoration: none;
-		}
-		.contact ul li {
-			display: inline-block;
-			margin-right:10px;
-		}
-		.contact .fa {
-			color:#fff;
-			font-size: 20px;
-		}
-		.contact .fa:hover {
-			-webkit-transform: scale(1.2);
-			-moz-transform: scale(1.2);
-			-o-transform: scale(1.2);
-			-ms-transform: scale(1.2);
-			transform: scale(1.2);
-			color:#dfdfdf;
-		}
-		footer {
-			margin-top: 20px;
-			font-size: 10px;
-			border-top: 1px solid #686871;
-		}
-		footer span {
-			float:left;
-			margin-right: 10px;
-			margin-top: 20px;
-			width:10px;
-			height:auto;
-			opacity: 0.2;
-		}
-		footer span:hover {
+    <style type="text/css">
+        @import 'https://fonts.googleapis.com/css?family=Oxygen';
+        html {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        
+        *,
+        *:before,
+        *:after {
+            -webkit-box-sizing: inherit;
+            -moz-box-sizing: inherit;
+            box-sizing: inherit;
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+            letter-spacing: 1.2px;
+        }
+        
+        body,
+        html {
+            max-width: 768px;
+            height: 100%;
+            margin: 0 auto;
+            display: table;
+            background: #303034;
+            font-family: 'Oxygen', sans-serif;
+            color: #d7d7d7;
+            font-size: 16px;
+            padding: 1.5%;
+            line-height: 1.5;
+        }
+        
+        .page-wrapper {
+            max-width: 768px;
+            margin: 0 auto;
+            display: table-cell;
+            vertical-align: middle;
+        }
+        
+        section h2 {
+            color: #fff;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #686871;
+            display: inline-block;
+            font-size: 20px;
+        }
+        
+        section ul li {
+            margin-bottom: 14px;
+        }
+        
+        .landing {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #686871;
+            position: relative;
+        }
+        
+        .landing h1 {
+            position: relative;
+            text-align: center;
+            color: #fff;
+            font-size: 30px;
+            width: 100%;
+            margin: 0;
+        }
+        
+        .landing span {
+            display: block;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 20px;
+            font-size: 12px;
+        }
+        
+        .projects-demos {
+            margin-bottom: 20px;
+        }
+        
+        .projects-demos a {
+            color: #fff;
+            text-decoration: underline;
+        }
+        
+        .projects-demos svg {
+            width: 10px;
+            height: auto;
+            fill: #fff;
+        }
+        
+        .projects-demos a:hover {
+            color: #303034;
+            background: #dfdfdf;
+            text-decoration: none;
+        }
+        
+        .about {
+            margin-bottom: 20px;
+        }
+        
+        .about svg {
+            width: 10px;
+            height: auto;
+            fill: #fff;
+        }
+        
+        .about .cv a {
+            color: #fff;
+            text-decoration: underline;
+        }
+        
+        .about .cv a:hover {
+            color: #303034;
+            background: #dfdfdf;
+            text-decoration: none;
+        }
+        
+        .contact ul li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        
+        .contact svg {
+            width: 20px;
+            height: auto;
+            fill: #dfdfdf;
+        }
+        
+        .contact svg:hover {
+            -webkit-transform: scale(1.2);
+            -moz-transform: scale(1.2);
+            -o-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+            transform: scale(1.2);
+            fill: #fff;
+        }
+        
+        footer {
+            margin-top: 20px;
+            font-size: 10px;
+            border-top: 1px solid #686871;
+        }
+        
+        footer span {
+            float: left;
+            margin-right: 10px;
+            margin-top: 20px;
+            width: 10px;
+            height: auto;
+            opacity: 0.2;
+        }
+        
+        footer span:hover {
             opacity: 1;
-		}
-		footer p {
-			margin-top: 20px;
-			float:right;
-		}
-	</style>
+        }
+        
+        footer p {
+            margin-top: 20px;
+            float: right;
+        }
+    </style>
 </head>
+
 <body>
 
-	<div class="page-wrapper"><!--page-wrapper-->
-		<div class="container"><!--container-->
+    <div class="page-wrapper">
+        <!--page-wrapper-->
+        <div class="container">
+            <!--container-->
 
-			<section class="landing">
-				<h1>Mehmet Burak Erman </h1>
-				<span>Front End Developer</span>
-			</section>
+            <section class="landing">
+                <h1>Mehmet Burak Erman </h1>
+                <span>Front End Developer</span>
+            </section>
 
-			<section class="projects-demos">
-				<h2>PROJECTS - DEMOS</h2>  
-				<ul>
-					<li><i class="fa fa-caret-right" aria-hidden="true"></i> <a href="https://chrome.google.com/webstore/detail/basic-to-do-list/fgkmaedaobllmdjloggjhgkgndimmahi/" target="_blank" rel="external">Basic To-Do List</a> A very basic to-do list extension for Google Chrome.</li>
+            <section class="projects-demos">
+                <h2>PROJECTS - DEMOS</h2>
+                <ul>
+                    <li>
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="46.02px" height="46.02px" viewBox="0 0 46.02 46.02" style="enable-background:new 0 0 46.02 46.02;" xml:space="preserve">
+                            <g>
+                                <path d="M14.757,46.02c-1.412,0-2.825-0.521-3.929-1.569c-2.282-2.17-2.373-5.78-0.204-8.063l12.758-13.418L10.637,9.645
+    C8.46,7.37,8.54,3.76,10.816,1.582c2.277-2.178,5.886-2.097,8.063,0.179l16.505,17.253c2.104,2.2,2.108,5.665,0.013,7.872
+    L18.893,44.247C17.77,45.424,16.267,46.02,14.757,46.02z" />
+                            </g>
+                        </svg>
 
-					<li><i class="fa fa-caret-right" aria-hidden="true"></i> <a href="https://mburakerman.github.io/colortopng/" target="_blank" rel="external">ColorToPng</a> Solid & Gradient PNG generator.</li>
+                        <a href="https://chrome.google.com/webstore/detail/basic-to-do-list/fgkmaedaobllmdjloggjhgkgndimmahi/" target="_blank" rel="external">Basic To-Do List</a> A very basic to-do list extension for Google Chrome.</li>
 
-					<li><i class="fa fa-caret-right" aria-hidden="true"></i> <a href="https://mburakerman.github.io/numscrubberjs/" target="_blank" rel="external">Numscrubber.js</a> Let's change values of input numbers by dragging the mouse left & right.</li>
+                    <li>
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="46.02px" height="46.02px" viewBox="0 0 46.02 46.02" style="enable-background:new 0 0 46.02 46.02;" xml:space="preserve">
+                            <g>
+                                <path d="M14.757,46.02c-1.412,0-2.825-0.521-3.929-1.569c-2.282-2.17-2.373-5.78-0.204-8.063l12.758-13.418L10.637,9.645
+    C8.46,7.37,8.54,3.76,10.816,1.582c2.277-2.178,5.886-2.097,8.063,0.179l16.505,17.253c2.104,2.2,2.108,5.665,0.013,7.872
+    L18.893,44.247C17.77,45.424,16.267,46.02,14.757,46.02z" />
+                            </g>
+                        </svg> <a href="https://mburakerman.github.io/colortopng/" target="_blank" rel="external">ColorToPng</a> Solid & Gradient PNG generator.</li>
 
-					<li><i class="fa fa-caret-right" aria-hidden="true"></i> <a href="https://mburakerman.github.io/hangmanizr/" target="_blank" rel="external">Hangmanizr</a> Quick hangman game made with React.js.</li>
+                    <li>
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="46.02px" height="46.02px" viewBox="0 0 46.02 46.02" style="enable-background:new 0 0 46.02 46.02;" xml:space="preserve">
+                            <g>
+                                <path d="M14.757,46.02c-1.412,0-2.825-0.521-3.929-1.569c-2.282-2.17-2.373-5.78-0.204-8.063l12.758-13.418L10.637,9.645
+    C8.46,7.37,8.54,3.76,10.816,1.582c2.277-2.178,5.886-2.097,8.063,0.179l16.505,17.253c2.104,2.2,2.108,5.665,0.013,7.872
+    L18.893,44.247C17.77,45.424,16.267,46.02,14.757,46.02z" />
+                            </g>
+                        </svg> <a href="https://mburakerman.github.io/numscrubberjs/" target="_blank" rel="external">Numscrubber.js</a> Let's change values of input numbers by dragging the mouse left & right.</li>
 
-					<li><i class="fa fa-caret-right" aria-hidden="true"></i> <a href="https://mburakerman.github.io/memorizr/" target="_blank" rel="external">Memorizr</a> Animal pairs game.</li>
-                    
-					<li><i class="fa fa-caret-right" aria-hidden="true"></i> <a href="https://mburakerman.github.io/aestextic/" target="_blank" rel="external">Aestextic</a> Aesthetic text generator.</li>
+                    <li>
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="46.02px" height="46.02px" viewBox="0 0 46.02 46.02" style="enable-background:new 0 0 46.02 46.02;" xml:space="preserve">
+                            <g>
+                                <path d="M14.757,46.02c-1.412,0-2.825-0.521-3.929-1.569c-2.282-2.17-2.373-5.78-0.204-8.063l12.758-13.418L10.637,9.645
+    C8.46,7.37,8.54,3.76,10.816,1.582c2.277-2.178,5.886-2.097,8.063,0.179l16.505,17.253c2.104,2.2,2.108,5.665,0.013,7.872
+    L18.893,44.247C17.77,45.424,16.267,46.02,14.757,46.02z" />
+                            </g>
+                        </svg> <a href="https://mburakerman.github.io/hangmanizr/" target="_blank" rel="external">Hangmanizr</a> Quick hangman game made with React.js.</li>
 
-                                        <li><i class="fa fa-caret-right" aria-hidden="true"></i> <a href="https://mburakerman.github.io/toolgif/" target="_blank" rel="external">Toolgif</a> A very simple jQuery gif tooltip plugin.</li>
-                    
-                                        <li><i class="fa fa-caret-right" aria-hidden="true"></i> <a href="https://mburakerman.github.io/draweditor/" target="_blank" rel="external">Draweditor</a> Draweditor is a simple free online sketching, drawing, image editing tool.</li>
-		 
-		                        <li><i class="fa fa-caret-right" aria-hidden="true"></i> <a href="http://codepen.io/mburakerman/full/vxQELp/" target="_blank" rel="external">Autocomplete Widget</a> See suggestions while you type.</li>
+                    <li>
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="46.02px" height="46.02px" viewBox="0 0 46.02 46.02" style="enable-background:new 0 0 46.02 46.02;" xml:space="preserve">
+                            <g>
+                                <path d="M14.757,46.02c-1.412,0-2.825-0.521-3.929-1.569c-2.282-2.17-2.373-5.78-0.204-8.063l12.758-13.418L10.637,9.645
+    C8.46,7.37,8.54,3.76,10.816,1.582c2.277-2.178,5.886-2.097,8.063,0.179l16.505,17.253c2.104,2.2,2.108,5.665,0.013,7.872
+    L18.893,44.247C17.77,45.424,16.267,46.02,14.757,46.02z" />
+                            </g>
+                        </svg> <a href="https://mburakerman.github.io/memorizr/" target="_blank" rel="external">Memorizr</a> Animal pairs game.</li>
 
-                  	                <li><i class="fa fa-caret-right" aria-hidden="true"></i> <a href="https://mburakerman.github.io/runicorn/" target="_blank" rel="external">Runicorn</a> Mini obstacle game.</li>
+                    <li>
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="46.02px" height="46.02px" viewBox="0 0 46.02 46.02" style="enable-background:new 0 0 46.02 46.02;" xml:space="preserve">
+                            <g>
+                                <path d="M14.757,46.02c-1.412,0-2.825-0.521-3.929-1.569c-2.282-2.17-2.373-5.78-0.204-8.063l12.758-13.418L10.637,9.645
+    C8.46,7.37,8.54,3.76,10.816,1.582c2.277-2.178,5.886-2.097,8.063,0.179l16.505,17.253c2.104,2.2,2.108,5.665,0.013,7.872
+    L18.893,44.247C17.77,45.424,16.267,46.02,14.757,46.02z" />
+                            </g>
+                        </svg> <a href="https://mburakerman.github.io/aestextic/" target="_blank" rel="external">Aestextic</a> Aesthetic text generator.</li>
 
-                  	                <li><i class="fa fa-caret-right" aria-hidden="true"></i> <a href="http://istanbulpsikoloji.org/" target="_blank" rel="external">İstanbul Üniversitesi Psikoloji Kulübü</a> Official website of Istanbul University Psychology Club.</li>
-					
-					<li><i class="fa fa-caret-right" aria-hidden="true"></i> <a href="https://codepen.io/mburakerman/full/LkOqGp/" target="_blank" rel="external">Css3 Button Generator</a> Create your own custom button.</li>
+                    <li>
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="46.02px" height="46.02px" viewBox="0 0 46.02 46.02" style="enable-background:new 0 0 46.02 46.02;" xml:space="preserve">
+                            <g>
+                                <path d="M14.757,46.02c-1.412,0-2.825-0.521-3.929-1.569c-2.282-2.17-2.373-5.78-0.204-8.063l12.758-13.418L10.637,9.645
+    C8.46,7.37,8.54,3.76,10.816,1.582c2.277-2.178,5.886-2.097,8.063,0.179l16.505,17.253c2.104,2.2,2.108,5.665,0.013,7.872
+    L18.893,44.247C17.77,45.424,16.267,46.02,14.757,46.02z" />
+                            </g>
+                        </svg> <a href="https://mburakerman.github.io/toolgif/" target="_blank" rel="external">Toolgif</a> A very simple jQuery gif tooltip plugin.</li>
 
-					<li><i class="fa fa-caret-right" aria-hidden="true"></i> <a href="https://twitter.com/thememegifs/" target="_blank" rel="external">The Memegifs</a> This is my fun project. I am collecting my favorite gif edits and memes there.</li>
-				</ul>
-			</section>
+                    <li>
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="46.02px" height="46.02px" viewBox="0 0 46.02 46.02" style="enable-background:new 0 0 46.02 46.02;" xml:space="preserve">
+                            <g>
+                                <path d="M14.757,46.02c-1.412,0-2.825-0.521-3.929-1.569c-2.282-2.17-2.373-5.78-0.204-8.063l12.758-13.418L10.637,9.645
+    C8.46,7.37,8.54,3.76,10.816,1.582c2.277-2.178,5.886-2.097,8.063,0.179l16.505,17.253c2.104,2.2,2.108,5.665,0.013,7.872
+    L18.893,44.247C17.77,45.424,16.267,46.02,14.757,46.02z" />
+                            </g>
+                        </svg> <a href="https://mburakerman.github.io/draweditor/" target="_blank" rel="external">Draweditor</a> Draweditor is a simple free online sketching, drawing, image editing tool.</li>
 
-			<section class="about">
-				<h2>ABOUT</h2>    
-				<ul>
-					<li><i class="fa fa-caret-right" aria-hidden="true"></i> Born in 1994.</li>
-					<li><i class="fa fa-caret-right" aria-hidden="true"></i> Graduated from Hacettepe University Economics.</li>
-					<li><i class="fa fa-caret-right" aria-hidden="true"></i> After starting to learn web development, i wanted to be a Front End Developer and now love coding and following web trends day by day.</li>
-				</ul>
-				<span class="cv"><a href="https://drive.google.com/file/d/0B4AeLls7EjKsaDhnVnJpTmNjMFU/view?usp=sharing" target="_blank" rel="external">Viev my CV</a></span>
-			</section>
+                    <li>
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="46.02px" height="46.02px" viewBox="0 0 46.02 46.02" style="enable-background:new 0 0 46.02 46.02;" xml:space="preserve">
+                            <g>
+                                <path d="M14.757,46.02c-1.412,0-2.825-0.521-3.929-1.569c-2.282-2.17-2.373-5.78-0.204-8.063l12.758-13.418L10.637,9.645
+    C8.46,7.37,8.54,3.76,10.816,1.582c2.277-2.178,5.886-2.097,8.063,0.179l16.505,17.253c2.104,2.2,2.108,5.665,0.013,7.872
+    L18.893,44.247C17.77,45.424,16.267,46.02,14.757,46.02z" />
+                            </g>
+                        </svg> <a href="http://codepen.io/mburakerman/full/vxQELp/" target="_blank" rel="external">Autocomplete Widget</a> See suggestions while you type.</li>
 
-			<section class="contact">
-				<h2>CONTACT</h2>
-				<ul>
-					<li>
-						<a href="https://www.facebook.com/mburakerman/" title="Facebook" target="_blank" rel="external">
-							<i class="fa fa-facebook" aria-hidden="true"></i>
-						</a>
-					</li>
+                    <li>
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="46.02px" height="46.02px" viewBox="0 0 46.02 46.02" style="enable-background:new 0 0 46.02 46.02;" xml:space="preserve">
+                            <g>
+                                <path d="M14.757,46.02c-1.412,0-2.825-0.521-3.929-1.569c-2.282-2.17-2.373-5.78-0.204-8.063l12.758-13.418L10.637,9.645
+    C8.46,7.37,8.54,3.76,10.816,1.582c2.277-2.178,5.886-2.097,8.063,0.179l16.505,17.253c2.104,2.2,2.108,5.665,0.013,7.872
+    L18.893,44.247C17.77,45.424,16.267,46.02,14.757,46.02z" />
+                            </g>
+                        </svg> <a href="https://mburakerman.github.io/runicorn/" target="_blank" rel="external">Runicorn</a> Mini obstacle game.</li>
 
-					<li>
-						<a href="https://twitter.com/mburakerman" title="Twitter" target="_blank" rel="external">
-							<i class="fa fa-twitter" aria-hidden="true"></i>
-						</a>
-					</li>
+                    <li>
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="46.02px" height="46.02px" viewBox="0 0 46.02 46.02" style="enable-background:new 0 0 46.02 46.02;" xml:space="preserve">
+                            <g>
+                                <path d="M14.757,46.02c-1.412,0-2.825-0.521-3.929-1.569c-2.282-2.17-2.373-5.78-0.204-8.063l12.758-13.418L10.637,9.645
+    C8.46,7.37,8.54,3.76,10.816,1.582c2.277-2.178,5.886-2.097,8.063,0.179l16.505,17.253c2.104,2.2,2.108,5.665,0.013,7.872
+    L18.893,44.247C17.77,45.424,16.267,46.02,14.757,46.02z" />
+                            </g>
+                        </svg> <a href="http://istanbulpsikoloji.org/" target="_blank" rel="external">İstanbul Üniversitesi Psikoloji Kulübü</a> Official website of Istanbul University Psychology Club.</li>
 
-					<li>
-						<a href="https://www.instagram.com/mburakerman/" title="Instagram" target="_blank" rel="external">
-							<i class="fa fa-instagram" aria-hidden="true"></i>
-						</a>
-					</li>
+                    <li>
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="46.02px" height="46.02px" viewBox="0 0 46.02 46.02" style="enable-background:new 0 0 46.02 46.02;" xml:space="preserve">
+                            <g>
+                                <path d="M14.757,46.02c-1.412,0-2.825-0.521-3.929-1.569c-2.282-2.17-2.373-5.78-0.204-8.063l12.758-13.418L10.637,9.645
+    C8.46,7.37,8.54,3.76,10.816,1.582c2.277-2.178,5.886-2.097,8.063,0.179l16.505,17.253c2.104,2.2,2.108,5.665,0.013,7.872
+    L18.893,44.247C17.77,45.424,16.267,46.02,14.757,46.02z" />
+                            </g>
+                        </svg> <a href="https://codepen.io/mburakerman/full/LkOqGp/" target="_blank" rel="external">Css3 Button Generator</a> Create your own custom button.</li>
 
-					<li>
-						<a href="https://codepen.io/mburakerman/" title="CodePen" target="_blank" rel="external">
-							<i class="fa fa-codepen" aria-hidden="true"></i>
-						</a>
-					</li>
+                    <li>
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="46.02px" height="46.02px" viewBox="0 0 46.02 46.02" style="enable-background:new 0 0 46.02 46.02;" xml:space="preserve">
+                            <g>
+                                <path d="M14.757,46.02c-1.412,0-2.825-0.521-3.929-1.569c-2.282-2.17-2.373-5.78-0.204-8.063l12.758-13.418L10.637,9.645
+    C8.46,7.37,8.54,3.76,10.816,1.582c2.277-2.178,5.886-2.097,8.063,0.179l16.505,17.253c2.104,2.2,2.108,5.665,0.013,7.872
+    L18.893,44.247C17.77,45.424,16.267,46.02,14.757,46.02z" />
+                            </g>
+                        </svg> <a href="https://twitter.com/thememegifs/" target="_blank" rel="external">The Memegifs</a> This is my fun project. I am collecting my favorite gif edits and memes there.</li>
+                </ul>
+            </section>
 
-					<li>
-						<a href="https://github.com/mburakerman" title="Github" target="_blank" rel="external">
-							<i class="fa fa-github" aria-hidden="true"></i>
-						</a>
-					</li>
+            <section class="about">
+                <h2>ABOUT</h2>
+                <ul>
+                    <li>
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="46.02px" height="46.02px" viewBox="0 0 46.02 46.02" style="enable-background:new 0 0 46.02 46.02;" xml:space="preserve">
+                            <g>
+                                <path d="M14.757,46.02c-1.412,0-2.825-0.521-3.929-1.569c-2.282-2.17-2.373-5.78-0.204-8.063l12.758-13.418L10.637,9.645
+    C8.46,7.37,8.54,3.76,10.816,1.582c2.277-2.178,5.886-2.097,8.063,0.179l16.505,17.253c2.104,2.2,2.108,5.665,0.013,7.872
+    L18.893,44.247C17.77,45.424,16.267,46.02,14.757,46.02z" />
+                            </g>
+                        </svg> Born in 1994.</li>
 
-					<li>
-						<a href="https://linkedin.com/in/mburakerman/" title="Linkedin" target="_blank" rel="external">
-							<i class="fa fa-linkedin" aria-hidden="true"></i>
-						</a>
-					</li>
+                    <li>
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="46.02px" height="46.02px" viewBox="0 0 46.02 46.02" style="enable-background:new 0 0 46.02 46.02;" xml:space="preserve">
+                            <g>
+                                <path d="M14.757,46.02c-1.412,0-2.825-0.521-3.929-1.569c-2.282-2.17-2.373-5.78-0.204-8.063l12.758-13.418L10.637,9.645
+    C8.46,7.37,8.54,3.76,10.816,1.582c2.277-2.178,5.886-2.097,8.063,0.179l16.505,17.253c2.104,2.2,2.108,5.665,0.013,7.872
+    L18.893,44.247C17.77,45.424,16.267,46.02,14.757,46.02z" />
+                            </g>
+                        </svg> Graduated from Hacettepe University Economics.</li>
 
-					<li>
-						<a href="mailto:mburakerman@gmail.com" title="Email" target="_blank" rel="external">
-							<i class="fa fa-envelope-o" aria-hidden="true"></i>
-						</a>
-					</li>
-				</ul>
-			</section>
+                    <li>
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="46.02px" height="46.02px" viewBox="0 0 46.02 46.02" style="enable-background:new 0 0 46.02 46.02;" xml:space="preserve">
+                            <g>
+                                <path d="M14.757,46.02c-1.412,0-2.825-0.521-3.929-1.569c-2.282-2.17-2.373-5.78-0.204-8.063l12.758-13.418L10.637,9.645
+    C8.46,7.37,8.54,3.76,10.816,1.582c2.277-2.178,5.886-2.097,8.063,0.179l16.505,17.253c2.104,2.2,2.108,5.665,0.013,7.872
+    L18.893,44.247C17.77,45.424,16.267,46.02,14.757,46.02z" />
+                            </g>
+                        </svg> After starting to learn web development, i wanted to be a Front End Developer and now love coding and following web trends day by day.</li>
+                </ul>
+                <span class="cv"><a href="https://drive.google.com/file/d/0B4AeLls7EjKsaDhnVnJpTmNjMFU/view?usp=sharing" target="_blank" rel="external">Viev my CV</a></span>
+            </section>
 
-			<footer>
-				<span class="html5" title="Html5"><img src="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB2aWV3Qm94PSIwIDAgMTA1LjkgMTIwLjEiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDEwNS45IDEyMC4xIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGc+Cgk8cG9seWdvbiBmaWxsPSIjRTU1MDI1IiBwb2ludHM9IjAsMCAxMDUuOSwwIDk2LjUsMTA4LjIgNTIuOSwxMjAuMSA5LjQsMTA4LjIgCSIvPgoJPHBvbHlnb24gZmlsbD0iI0YyNjcyMiIgcG9pbnRzPSI5Ni44LDkgNTMuMyw5IDUzLjMsMTExLjIgODguNCwxMDEuMiAJIi8+Cgk8Zz4KCQk8cG9seWdvbiBmaWxsPSIjRkZGRkZGIiBwb2ludHM9IjM0LjQsMzUuNSA4NS40LDM1LjUgODYuNiwyMi4zIDgwLjIsMjIuMyAxOS45LDIyLjMgMjMuNiw2MS43IDY5LjUsNjEuNyA2Ny44LDc5LjYgNTIuOCw4My4zIAoJCQkzOC4zLDc5LjYgMzcuNCw2OSAyNC4zLDY5IDI2LjMsOTAuNCA1My40LDk3LjggODAuMiw5MC40IDg0LjEsNDguOCAzNiw0OC44IAkJIi8+Cgk8L2c+Cgk8Zz4KCQk8cG9seWdvbiBmaWxsPSIjRTZFNkU2IiBwb2ludHM9IjUyLjgsODMuMyAzOC4zLDc5LjYgMzcuNCw2OSAyNC4zLDY5IDI2LjMsOTAuNCA1My4zLDk3LjggNTMuMyw4My4yIAkJIi8+CgkJPHBvbHlnb24gZmlsbD0iI0VCRUJFQiIgcG9pbnRzPSIzNiw0OC44IDM0LjQsMzUuNSA1My4zLDM1LjUgNTMuMywyMi4zIDE5LjksMjIuMyAyMy42LDYxLjcgNTMuMyw2MS43IDUzLjMsNDguOCAJCSIvPgoJPC9nPgo8L2c+Cjwvc3ZnPgo=" alt="Html5 logo"></span>
+            <section class="contact">
+                <h2>CONTACT</h2>
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/mburakerman/" title="Facebook" target="_blank" rel="external">
+                            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+                                <path d="M15.117 0H.883C.395 0 0 .395 0 .883v14.234c0 .488.395.883.883.883h7.663V9.804H6.46V7.39h2.086V5.607c0-2.066 1.262-3.19 3.106-3.19.883 0 1.642.064 1.863.094v2.16h-1.28c-1 0-1.195.48-1.195 1.18v1.54h2.39l-.31 2.42h-2.08V16h4.077c.488 0 .883-.395.883-.883V.883C16 .395 15.605 0 15.117 0" fill-rule="nonzero" />
+                            </svg>
+                        </a>
+                    </li>
 
-				<span class="css3" title="Css3"><img src="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB2aWV3Qm94PSIwIDAgMTA1LjMgMTE5LjQiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDEwNS4zIDExOS40IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGc+Cgk8cG9seWdvbiBmaWxsPSIjMEE3MUI5IiBwb2ludHM9IjAsMCAxMDUuMywwIDk1LjksMTA3LjYgNTIuNiwxMTkuNCA5LjQsMTA3LjYgCSIvPgoJPHBvbHlnb24gZmlsbD0iIzI4QTdERSIgcG9pbnRzPSI1Mi42LDguOSA5Ni41LDguOSA4OC4xLDEwMC42IDUyLjYsMTEwLjggCSIvPgoJPGc+CgkJPHBvbHlnb24gZmlsbD0iI0VCRUJFQiIgcG9pbnRzPSI3OS44LDIyLjIgMTkuNywyMi4yIDIxLDM1LjMgNzEuMiwzNS4zIDY5LjYsNDguNSAyMi4yLDQ4LjUgMjMuNCw2MS40IDY4LjksNjEuNCA2Ny4yLDc5LjIgCgkJCTUyLjQsODIuOCAzNy45LDc5LjIgMzcuMSw2OC42IDI0LjEsNjguNiAyNi4xLDg5LjkgNTMsOTcuMiA3OS44LDg5LjkgODYuMSwyMi4yIAkJIi8+Cgk8L2c+Cgk8Zz4KCQk8cG9seWdvbiBmaWxsPSJub25lIiBwb2ludHM9IjY5LjYsNDguNSA3MS4yLDM1LjMgNTIuOSwzNS4zIDUyLjksNDguNSAJCSIvPgoJCTxwb2x5Z29uIGZpbGw9Im5vbmUiIHBvaW50cz0iNjcuMiw3OS4yIDY4LjksNjEuNCA1Mi45LDYxLjQgNTIuOSw4Mi42IAkJIi8+CgkJPHBvbHlnb24gZmlsbD0iI0ZGRkZGRiIgcG9pbnRzPSI3OS43LDIyLjIgNTIuNiwyMi4yIDUyLjYsMzUuMyA3MS4xLDM1LjMgNjkuNSw0OC41IDUyLjYsNDguNSA1Mi42LDYxLjQgNjguOCw2MS40IDY3LjEsNzkuMiAKCQkJNTIuNiw4Mi42IDUyLjYsOTcuMiA1Mi44LDk3LjIgNzkuNyw4OS45IDg2LjEsMjIuMiAJCSIvPgoJPC9nPgo8L2c+Cjwvc3ZnPgo=" alt="Css3 logo"></span>
+                    <li>
+                        <a href="https://twitter.com/mburakerman" title="Twitter" target="_blank" rel="external">
+                            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+                                <path d="M16 3.038c-.59.26-1.22.437-1.885.517.677-.407 1.198-1.05 1.443-1.816-.634.37-1.337.64-2.085.79-.598-.64-1.45-1.04-2.396-1.04-1.812 0-3.282 1.47-3.282 3.28 0 .26.03.51.085.75-2.728-.13-5.147-1.44-6.766-3.42C.83 2.58.67 3.14.67 3.75c0 1.14.58 2.143 1.46 2.732-.538-.017-1.045-.165-1.487-.41v.04c0 1.59 1.13 2.918 2.633 3.22-.276.074-.566.114-.865.114-.21 0-.41-.02-.61-.058.42 1.304 1.63 2.253 3.07 2.28-1.12.88-2.54 1.404-4.07 1.404-.26 0-.52-.015-.78-.045 1.46.93 3.18 1.474 5.04 1.474 6.04 0 9.34-5 9.34-9.33 0-.14 0-.28-.01-.42.64-.46 1.2-1.04 1.64-1.7z" fill-rule="nonzero" />
+                            </svg>
+                        </a>
+                    </li>
 
-				<span class="js" title="JavaScript"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgNTAwIDUwMCI+PHJlY3QgeD0iNS41IiB5PSI1LjUiIGZpbGw9IiNGMERCNEYiIHdpZHRoPSI0ODkiIGhlaWdodD0iNDg5Ii8+PHBhdGggZmlsbD0iIzMyMzMzMCIgZD0iTTQ1NC40NzggMzc3Ljg3NWMtMy41OC0yMi4zMTItMTguMTI4LTQxLjA0NS02MS4yMTgtNTguNTIyLTE0Ljk2Ny02Ljg4LTMxLjY1NC0xMS44MDYtMzYuNjI4LTIzLjE0Ny0xLjc2Ny02LjYwMi0xLjk5OS0xMC4zMTktLjg4My0xNC4zMTggMy4yMDgtMTIuOTY4IDE4LjY4Ni0xNy4wMTIgMzAuOTU4LTEzLjI5MyA3LjkwMiAyLjY0OCAxNS4zODYgOC43MzkgMTkuODk1IDE4LjQ1MyAyMS4xMDQtMTMuNjY2IDIxLjA1Ni0xMy41NzIgMzUuNzkyLTIyLjk2My01LjM5My04LjM2Ni04LjI3NS0xMi4yMjUtMTEuODA3LTE1LjgwNC0xMi42OS0xNC4xNzctMjkuOTgxLTIxLjQ3NS01Ny42MzktMjAuOTE3LTQuNzg4LjYwNC05LjYyMiAxLjI1NS0xNC40MSAxLjg2LTEzLjgwNSAzLjQ4Ni0yNi45NiAxMC43MzctMzQuNjc2IDIwLjQ1Mi0yMy4xNDkgMjYuMjY0LTE2LjU0NyA3Mi4yMzQgMTEuNjIxIDkxLjE1MyAyNy43NSAyMC44MjQgNjguNTE3IDI1LjU2NSA3My43MjIgNDUuMDQyIDUuMDY3IDIzLjg0NS0xNy41MjQgMzEuNTYxLTM5Ljk3NSAyOC44MTktMTYuNTQ4LTMuNDM5LTI1Ljc1Mi0xMS44NTQtMzUuNy0yNy4xNDYtMTguMzEzIDEwLjU5OC0xOC4zMTMgMTAuNTk4LTM3LjEzOSAyMS40MjggNC40NjIgOS43NjIgOS4xNTcgMTQuMTc4IDE2LjY0MSAyMi42MzcgMzUuNDIgMzUuOTMxIDEyNC4wNjMgMzQuMTY2IDEzOS45NTktMjAuMjIuNjUxLTEuODU5IDQuOTI3LTE0LjMxNyAxLjQ4Ny0zMy41MTR6bS0xODMuMTQyLTE0Ny42M2gtNDUuNzRsLS4xODYgMTE4LjI1MmMwIDI1LjE0NyAxLjMwMiA0OC4yMDMtMi43ODkgNTUuMjctNi42OTQgMTMuODk3LTI0LjAzMiAxMi4xNzgtMzEuOTM1IDkuNDgxLTguMDQyLTMuOTUxLTEyLjEzMi05LjU3NS0xNi44NzMtMTcuNTIzLTEuMzAxLTIuMjc4LTIuMjc4LTQuMDQ0LTIuNjA0LTQuMTg0LTEyLjQxMSA3LjU3Ni0yNC43NzUgMTUuMi0zNy4xODcgMjIuNzc2IDYuMTgyIDEyLjY5IDE1LjI5MyAyMy43MDcgMjYuOTYgMzAuODY0IDE3LjQzMiAxMC40NTggNDAuODU4IDEzLjY2NiA2NS4zNTUgOC4wNDEgMTUuOTQzLTQuNjQ3IDI5LjcwMy0xNC4yNyAzNi45MDctMjguOTExIDEwLjQxMi0xOS4xOTggOC4xODEtNDIuNDM5IDguMDg4LTY4LjE0NS4yMzYtNDEuOTI3LjAwNC04My44NTQuMDA0LTEyNS45MjF6Ii8+PC9zdmc+Cg==" alt="JavaScript logo"></span>
-				<p class="copyright">© 2017 Mehmet Burak Erman</p>
-			</footer>
+                    <li>
+                        <a href="https://www.instagram.com/mburakerman/" title="Instagram" target="_blank" rel="external">
+                            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+                                <path d="M8 0C5.827 0 5.555.01 4.702.048 3.85.088 3.27.222 2.76.42c-.526.204-.973.478-1.417.923-.445.444-.72.89-.923 1.417-.198.51-.333 1.09-.372 1.942C.008 5.555 0 5.827 0 8s.01 2.445.048 3.298c.04.852.174 1.433.372 1.942.204.526.478.973.923 1.417.444.445.89.72 1.417.923.51.198 1.09.333 1.942.372.853.04 1.125.048 3.298.048s2.445-.01 3.298-.048c.852-.04 1.433-.174 1.942-.372.526-.204.973-.478 1.417-.923.445-.444.72-.89.923-1.417.198-.51.333-1.09.372-1.942.04-.853.048-1.125.048-3.298s-.01-2.445-.048-3.298c-.04-.852-.174-1.433-.372-1.942-.204-.526-.478-.973-.923-1.417-.444-.445-.89-.72-1.417-.923-.51-.198-1.09-.333-1.942-.372C10.445.008 10.173 0 8 0zm0 1.44c2.136 0 2.39.01 3.233.048.78.036 1.203.166 1.485.276.374.145.64.318.92.598.28.28.453.546.598.92.11.282.24.705.276 1.485.038.844.047 1.097.047 3.233s-.01 2.39-.05 3.233c-.04.78-.17 1.203-.28 1.485-.15.374-.32.64-.6.92-.28.28-.55.453-.92.598-.28.11-.71.24-1.49.276-.85.038-1.1.047-3.24.047s-2.39-.01-3.24-.05c-.78-.04-1.21-.17-1.49-.28-.38-.15-.64-.32-.92-.6-.28-.28-.46-.55-.6-.92-.11-.28-.24-.71-.28-1.49-.03-.84-.04-1.1-.04-3.23s.01-2.39.04-3.24c.04-.78.17-1.21.28-1.49.14-.38.32-.64.6-.92.28-.28.54-.46.92-.6.28-.11.7-.24 1.48-.28.85-.03 1.1-.04 3.24-.04zm0 2.452c-2.27 0-4.108 1.84-4.108 4.108 0 2.27 1.84 4.108 4.108 4.108 2.27 0 4.108-1.84 4.108-4.108 0-2.27-1.84-4.108-4.108-4.108zm0 6.775c-1.473 0-2.667-1.194-2.667-2.667 0-1.473 1.194-2.667 2.667-2.667 1.473 0 2.667 1.194 2.667 2.667 0 1.473-1.194 2.667-2.667 2.667zm5.23-6.937c0 .53-.43.96-.96.96s-.96-.43-.96-.96.43-.96.96-.96.96.43.96.96z" />
+                            </svg>
+                        </a>
+                    </li>
 
-		</div><!--container-->
-	</div><!--page-wrapper-->
+                    <li>
+                        <a href="https://www.goodreads.com/mburakerman/" title="Goodreads" target="_blank" rel="external">
+                            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M13.022 10.63V.326h-1.37V2.26h-.043c-.14-.303-.32-.593-.56-.87-.24-.274-.51-.517-.82-.727-.31-.21-.64-.373-1.01-.49C8.85.06 8.46 0 8.04 0c-.805 0-1.53.15-2.16.446-.63.297-1.16.703-1.587 1.217-.427.515-.753 1.116-.978 1.804-.224.69-.337 1.417-.337 2.185 0 .797.094 1.547.283 2.25.19.703.49 1.315.91 1.837.42.52.94.93 1.58 1.22.64.29 1.41.44 2.31.44.83 0 1.55-.21 2.17-.63.62-.42 1.09-.98 1.41-1.68h.04v1.52c0 1.36-.28 2.4-.84 3.13-.56.72-1.48 1.09-2.76 1.09-.38 0-.75-.04-1.11-.12-.36-.08-.69-.21-.99-.38-.29-.18-.55-.4-.76-.69-.21-.29-.35-.64-.42-1.06H3.4c.045.59.21 1.1.49 1.53.283.43.64.78 1.066 1.06.427.27.91.47 1.445.6.54.13 1.09.2 1.66.2.92 0 1.69-.13 2.32-.37.63-.25 1.14-.6 1.53-1.07.4-.47.68-1.03.86-1.7.18-.67.28-1.42.28-2.24zm-4.98-.37c-.636 0-1.187-.126-1.65-.38-.464-.253-.85-.587-1.153-1-.31-.413-.53-.887-.68-1.423-.15-.537-.22-1.087-.22-1.653 0-.58.07-1.148.2-1.706.14-.558.36-1.055.66-1.49.3-.434.69-.786 1.15-1.054.46-.268 1.02-.402 1.67-.402s1.2.138 1.66.413c.45.276.83.638 1.12 1.087.29.45.5.95.63 1.5s.19 1.102.19 1.652c0 .566-.08 1.116-.23 1.653-.15.536-.38 1.01-.69 1.423-.31.413-.68.747-1.13 1-.45.254-.97.38-1.57.38z" fill-rule="nonzero"/></svg>
+                        </a>
+                    </li>
 
-	<script>
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-		ga('create', 'UA-75826567-3', 'auto');
-		ga('send', 'pageview');
+                    <li>
+                        <a href="https://codepen.io/mburakerman/" title="CodePen" target="_blank" rel="external">
+                            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+                                <path d="M15.988 5.443c-.004-.02-.007-.04-.012-.058l-.01-.033c-.006-.017-.012-.034-.02-.05-.003-.012-.01-.023-.014-.034l-.023-.045-.02-.032-.03-.04-.03-.03-.04-.03-.03-.02-.04-.03-.03-.02-.01-.01L8.38.12c-.23-.154-.53-.154-.76 0L.302 4.99.292 5l-.03.023-.04.032-.025.027-.034.037-.024.03-.03.04c-.01.01-.02.02-.02.03l-.03.04-.01.04c-.01.01-.01.03-.02.05l-.01.03c-.01.02-.01.04-.01.06v.03C0 5.5 0 5.53 0 5.56v4.875c0 .03.002.06.006.09l.007.03c.003.02.006.04.013.058l.01.033c.006.018.01.035.018.05l.015.033c0 .01.01.03.02.04l.02.03c.01.01.02.03.03.04l.02.03.03.03c.01.01.01.02.02.02l.04.03.03.02.01.01 7.31 4.88c.11.08.25.11.38.11s.26-.04.38-.12L15.68 11l.01-.01.03-.022.04-.03.03-.026.035-.037.024-.03.03-.04.02-.032.02-.046.01-.036.02-.05.01-.03.02-.05v-5c0-.03 0-.06-.01-.09l-.01-.03zM8 9.626L5.568 8 8 6.374 10.432 8 8 9.626zM7.312 5.18l-2.98 1.993-2.406-1.61 5.386-3.59V5.18zM3.095 8l-1.72 1.15v-2.3L3.095 8zm1.237.828l2.98 1.993v3.21l-5.386-3.59 2.406-1.61zm4.355 1.993l2.98-1.99 2.407 1.61-5.387 3.59v-3.2zM12.905 8l1.72-1.15v2.3L12.905 8zm-1.237-.827L8.688 5.18V1.97l5.386 3.59-2.406 1.61z" fill-rule="nonzero" />
+                            </svg>
+                        </a>
+                    </li>
 
-	</script>
+                    <li>
+                        <a href="https://github.com/mburakerman" title="Github" target="_blank" rel="external">
+                            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+                                <path d="M8 0C3.58 0 0 3.582 0 8c0 3.535 2.292 6.533 5.47 7.59.4.075.547-.172.547-.385 0-.19-.007-.693-.01-1.36-2.226.483-2.695-1.073-2.695-1.073-.364-.924-.89-1.17-.89-1.17-.725-.496.056-.486.056-.486.803.056 1.225.824 1.225.824.714 1.223 1.873.87 2.33.665.072-.517.278-.87.507-1.07-1.777-.2-3.644-.888-3.644-3.953 0-.873.31-1.587.823-2.147-.09-.202-.36-1.015.07-2.117 0 0 .67-.215 2.2.82.64-.178 1.32-.266 2-.27.68.004 1.36.092 2 .27 1.52-1.035 2.19-.82 2.19-.82.43 1.102.16 1.915.08 2.117.51.56.82 1.274.82 2.147 0 3.073-1.87 3.75-3.65 3.947.28.24.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.14.46.55.38C13.71 14.53 16 11.53 16 8c0-4.418-3.582-8-8-8" />
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://linkedin.com/in/mburakerman/" title="LinkedIn" target="_blank" rel="external">
+                            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+                                <path d="M13.632 13.635h-2.37V9.922c0-.886-.018-2.025-1.234-2.025-1.235 0-1.424.964-1.424 1.96v3.778h-2.37V6H8.51v1.04h.03c.318-.6 1.092-1.233 2.247-1.233 2.4 0 2.845 1.58 2.845 3.637v4.188zM3.558 4.955c-.762 0-1.376-.617-1.376-1.377 0-.758.614-1.375 1.376-1.375.76 0 1.376.617 1.376 1.375 0 .76-.617 1.377-1.376 1.377zm1.188 8.68H2.37V6h2.376v7.635zM14.816 0H1.18C.528 0 0 .516 0 1.153v13.694C0 15.484.528 16 1.18 16h13.635c.652 0 1.185-.516 1.185-1.153V1.153C16 .516 15.467 0 14.815 0z" fill-rule="nonzero" />
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="mailto:mburakerman@gmail.com" title="Email" target="_blank" rel="external">
+
+                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                                <g>
+                                    <path d="M448,64H64C28.656,64,0,92.656,0,128v256c0,35.344,28.656,64,64,64h384c35.344,0,64-28.656,64-64V128
+        C512,92.656,483.344,64,448,64z M342.656,234.781l135.469-116.094c0.938,3,1.875,6,1.875,9.313v256
+        c0,2.219-0.844,4.188-1.281,6.281L342.656,234.781z M448,96c2.125,0,4,0.813,6,1.219L256,266.938L58,97.219
+        C60,96.813,61.875,96,64,96H448z M33.266,390.25C32.828,388.156,32,386.219,32,384V128c0-3.313,0.953-6.313,1.891-9.313
+        L169.313,234.75L33.266,390.25z M64,416c-3.234,0-6.172-0.938-9.125-1.844l138.75-158.563l51.969,44.531
+        C248.578,302.719,252.297,304,256,304s7.422-1.281,10.406-3.875l51.969-44.531l138.75,158.563C454.188,415.062,451.25,416,448,416
+        H64z" />
+                            </svg>
+
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+            <footer>
+                <span class="html5" title="Html5"><img src="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB2aWV3Qm94PSIwIDAgMTA1LjkgMTIwLjEiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDEwNS45IDEyMC4xIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGc+Cgk8cG9seWdvbiBmaWxsPSIjRTU1MDI1IiBwb2ludHM9IjAsMCAxMDUuOSwwIDk2LjUsMTA4LjIgNTIuOSwxMjAuMSA5LjQsMTA4LjIgCSIvPgoJPHBvbHlnb24gZmlsbD0iI0YyNjcyMiIgcG9pbnRzPSI5Ni44LDkgNTMuMyw5IDUzLjMsMTExLjIgODguNCwxMDEuMiAJIi8+Cgk8Zz4KCQk8cG9seWdvbiBmaWxsPSIjRkZGRkZGIiBwb2ludHM9IjM0LjQsMzUuNSA4NS40LDM1LjUgODYuNiwyMi4zIDgwLjIsMjIuMyAxOS45LDIyLjMgMjMuNiw2MS43IDY5LjUsNjEuNyA2Ny44LDc5LjYgNTIuOCw4My4zIAoJCQkzOC4zLDc5LjYgMzcuNCw2OSAyNC4zLDY5IDI2LjMsOTAuNCA1My40LDk3LjggODAuMiw5MC40IDg0LjEsNDguOCAzNiw0OC44IAkJIi8+Cgk8L2c+Cgk8Zz4KCQk8cG9seWdvbiBmaWxsPSIjRTZFNkU2IiBwb2ludHM9IjUyLjgsODMuMyAzOC4zLDc5LjYgMzcuNCw2OSAyNC4zLDY5IDI2LjMsOTAuNCA1My4zLDk3LjggNTMuMyw4My4yIAkJIi8+CgkJPHBvbHlnb24gZmlsbD0iI0VCRUJFQiIgcG9pbnRzPSIzNiw0OC44IDM0LjQsMzUuNSA1My4zLDM1LjUgNTMuMywyMi4zIDE5LjksMjIuMyAyMy42LDYxLjcgNTMuMyw2MS43IDUzLjMsNDguOCAJCSIvPgoJPC9nPgo8L2c+Cjwvc3ZnPgo=" alt="Html5 logo"></span>
+
+                <span class="css3" title="Css3"><img src="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB2aWV3Qm94PSIwIDAgMTA1LjMgMTE5LjQiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDEwNS4zIDExOS40IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGc+Cgk8cG9seWdvbiBmaWxsPSIjMEE3MUI5IiBwb2ludHM9IjAsMCAxMDUuMywwIDk1LjksMTA3LjYgNTIuNiwxMTkuNCA5LjQsMTA3LjYgCSIvPgoJPHBvbHlnb24gZmlsbD0iIzI4QTdERSIgcG9pbnRzPSI1Mi42LDguOSA5Ni41LDguOSA4OC4xLDEwMC42IDUyLjYsMTEwLjggCSIvPgoJPGc+CgkJPHBvbHlnb24gZmlsbD0iI0VCRUJFQiIgcG9pbnRzPSI3OS44LDIyLjIgMTkuNywyMi4yIDIxLDM1LjMgNzEuMiwzNS4zIDY5LjYsNDguNSAyMi4yLDQ4LjUgMjMuNCw2MS40IDY4LjksNjEuNCA2Ny4yLDc5LjIgCgkJCTUyLjQsODIuOCAzNy45LDc5LjIgMzcuMSw2OC42IDI0LjEsNjguNiAyNi4xLDg5LjkgNTMsOTcuMiA3OS44LDg5LjkgODYuMSwyMi4yIAkJIi8+Cgk8L2c+Cgk8Zz4KCQk8cG9seWdvbiBmaWxsPSJub25lIiBwb2ludHM9IjY5LjYsNDguNSA3MS4yLDM1LjMgNTIuOSwzNS4zIDUyLjksNDguNSAJCSIvPgoJCTxwb2x5Z29uIGZpbGw9Im5vbmUiIHBvaW50cz0iNjcuMiw3OS4yIDY4LjksNjEuNCA1Mi45LDYxLjQgNTIuOSw4Mi42IAkJIi8+CgkJPHBvbHlnb24gZmlsbD0iI0ZGRkZGRiIgcG9pbnRzPSI3OS43LDIyLjIgNTIuNiwyMi4yIDUyLjYsMzUuMyA3MS4xLDM1LjMgNjkuNSw0OC41IDUyLjYsNDguNSA1Mi42LDYxLjQgNjguOCw2MS40IDY3LjEsNzkuMiAKCQkJNTIuNiw4Mi42IDUyLjYsOTcuMiA1Mi44LDk3LjIgNzkuNyw4OS45IDg2LjEsMjIuMiAJCSIvPgoJPC9nPgo8L2c+Cjwvc3ZnPgo=" alt="Css3 logo"></span>
+
+                <span class="js" title="JavaScript"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgNTAwIDUwMCI+PHJlY3QgeD0iNS41IiB5PSI1LjUiIGZpbGw9IiNGMERCNEYiIHdpZHRoPSI0ODkiIGhlaWdodD0iNDg5Ii8+PHBhdGggZmlsbD0iIzMyMzMzMCIgZD0iTTQ1NC40NzggMzc3Ljg3NWMtMy41OC0yMi4zMTItMTguMTI4LTQxLjA0NS02MS4yMTgtNTguNTIyLTE0Ljk2Ny02Ljg4LTMxLjY1NC0xMS44MDYtMzYuNjI4LTIzLjE0Ny0xLjc2Ny02LjYwMi0xLjk5OS0xMC4zMTktLjg4My0xNC4zMTggMy4yMDgtMTIuOTY4IDE4LjY4Ni0xNy4wMTIgMzAuOTU4LTEzLjI5MyA3LjkwMiAyLjY0OCAxNS4zODYgOC43MzkgMTkuODk1IDE4LjQ1MyAyMS4xMDQtMTMuNjY2IDIxLjA1Ni0xMy41NzIgMzUuNzkyLTIyLjk2My01LjM5My04LjM2Ni04LjI3NS0xMi4yMjUtMTEuODA3LTE1LjgwNC0xMi42OS0xNC4xNzctMjkuOTgxLTIxLjQ3NS01Ny42MzktMjAuOTE3LTQuNzg4LjYwNC05LjYyMiAxLjI1NS0xNC40MSAxLjg2LTEzLjgwNSAzLjQ4Ni0yNi45NiAxMC43MzctMzQuNjc2IDIwLjQ1Mi0yMy4xNDkgMjYuMjY0LTE2LjU0NyA3Mi4yMzQgMTEuNjIxIDkxLjE1MyAyNy43NSAyMC44MjQgNjguNTE3IDI1LjU2NSA3My43MjIgNDUuMDQyIDUuMDY3IDIzLjg0NS0xNy41MjQgMzEuNTYxLTM5Ljk3NSAyOC44MTktMTYuNTQ4LTMuNDM5LTI1Ljc1Mi0xMS44NTQtMzUuNy0yNy4xNDYtMTguMzEzIDEwLjU5OC0xOC4zMTMgMTAuNTk4LTM3LjEzOSAyMS40MjggNC40NjIgOS43NjIgOS4xNTcgMTQuMTc4IDE2LjY0MSAyMi42MzcgMzUuNDIgMzUuOTMxIDEyNC4wNjMgMzQuMTY2IDEzOS45NTktMjAuMjIuNjUxLTEuODU5IDQuOTI3LTE0LjMxNyAxLjQ4Ny0zMy41MTR6bS0xODMuMTQyLTE0Ny42M2gtNDUuNzRsLS4xODYgMTE4LjI1MmMwIDI1LjE0NyAxLjMwMiA0OC4yMDMtMi43ODkgNTUuMjctNi42OTQgMTMuODk3LTI0LjAzMiAxMi4xNzgtMzEuOTM1IDkuNDgxLTguMDQyLTMuOTUxLTEyLjEzMi05LjU3NS0xNi44NzMtMTcuNTIzLTEuMzAxLTIuMjc4LTIuMjc4LTQuMDQ0LTIuNjA0LTQuMTg0LTEyLjQxMSA3LjU3Ni0yNC43NzUgMTUuMi0zNy4xODcgMjIuNzc2IDYuMTgyIDEyLjY5IDE1LjI5MyAyMy43MDcgMjYuOTYgMzAuODY0IDE3LjQzMiAxMC40NTggNDAuODU4IDEzLjY2NiA2NS4zNTUgOC4wNDEgMTUuOTQzLTQuNjQ3IDI5LjcwMy0xNC4yNyAzNi45MDctMjguOTExIDEwLjQxMi0xOS4xOTggOC4xODEtNDIuNDM5IDguMDg4LTY4LjE0NS4yMzYtNDEuOTI3LjAwNC04My44NTQuMDA0LTEyNS45MjF6Ii8+PC9zdmc+Cg==" alt="JavaScript logo"></span>
+                <p class="copyright">© 2017 Mehmet Burak Erman</p>
+            </footer>
+
+        </div>
+        <!--container-->
+    </div>
+    <!--page-wrapper-->
+
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-75826567-3', 'auto');
+        ga('send', 'pageview');
+    </script>
 </body>
+
 </html>
