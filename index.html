@@ -213,7 +213,7 @@
             border-top: 1px solid #686871;
         }
 
-        footer span {
+        footer span:not(#year) {
             float: left;
             margin-right: 10px;
             margin-top: 20px;
@@ -631,13 +631,19 @@
                     <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgNTAwIDUwMCI+PHJlY3QgeD0iNS41IiB5PSI1LjUiIGZpbGw9IiNGMERCNEYiIHdpZHRoPSI0ODkiIGhlaWdodD0iNDg5Ii8+PHBhdGggZmlsbD0iIzMyMzMzMCIgZD0iTTQ1NC40NzggMzc3Ljg3NWMtMy41OC0yMi4zMTItMTguMTI4LTQxLjA0NS02MS4yMTgtNTguNTIyLTE0Ljk2Ny02Ljg4LTMxLjY1NC0xMS44MDYtMzYuNjI4LTIzLjE0Ny0xLjc2Ny02LjYwMi0xLjk5OS0xMC4zMTktLjg4My0xNC4zMTggMy4yMDgtMTIuOTY4IDE4LjY4Ni0xNy4wMTIgMzAuOTU4LTEzLjI5MyA3LjkwMiAyLjY0OCAxNS4zODYgOC43MzkgMTkuODk1IDE4LjQ1MyAyMS4xMDQtMTMuNjY2IDIxLjA1Ni0xMy41NzIgMzUuNzkyLTIyLjk2My01LjM5My04LjM2Ni04LjI3NS0xMi4yMjUtMTEuODA3LTE1LjgwNC0xMi42OS0xNC4xNzctMjkuOTgxLTIxLjQ3NS01Ny42MzktMjAuOTE3LTQuNzg4LjYwNC05LjYyMiAxLjI1NS0xNC40MSAxLjg2LTEzLjgwNSAzLjQ4Ni0yNi45NiAxMC43MzctMzQuNjc2IDIwLjQ1Mi0yMy4xNDkgMjYuMjY0LTE2LjU0NyA3Mi4yMzQgMTEuNjIxIDkxLjE1MyAyNy43NSAyMC44MjQgNjguNTE3IDI1LjU2NSA3My43MjIgNDUuMDQyIDUuMDY3IDIzLjg0NS0xNy41MjQgMzEuNTYxLTM5Ljk3NSAyOC44MTktMTYuNTQ4LTMuNDM5LTI1Ljc1Mi0xMS44NTQtMzUuNy0yNy4xNDYtMTguMzEzIDEwLjU5OC0xOC4zMTMgMTAuNTk4LTM3LjEzOSAyMS40MjggNC40NjIgOS43NjIgOS4xNTcgMTQuMTc4IDE2LjY0MSAyMi42MzcgMzUuNDIgMzUuOTMxIDEyNC4wNjMgMzQuMTY2IDEzOS45NTktMjAuMjIuNjUxLTEuODU5IDQuOTI3LTE0LjMxNyAxLjQ4Ny0zMy41MTR6bS0xODMuMTQyLTE0Ny42M2gtNDUuNzRsLS4xODYgMTE4LjI1MmMwIDI1LjE0NyAxLjMwMiA0OC4yMDMtMi43ODkgNTUuMjctNi42OTQgMTMuODk3LTI0LjAzMiAxMi4xNzgtMzEuOTM1IDkuNDgxLTguMDQyLTMuOTUxLTEyLjEzMi05LjU3NS0xNi44NzMtMTcuNTIzLTEuMzAxLTIuMjc4LTIuMjc4LTQuMDQ0LTIuNjA0LTQuMTg0LTEyLjQxMSA3LjU3Ni0yNC43NzUgMTUuMi0zNy4xODcgMjIuNzc2IDYuMTgyIDEyLjY5IDE1LjI5MyAyMy43MDcgMjYuOTYgMzAuODY0IDE3LjQzMiAxMC40NTggNDAuODU4IDEzLjY2NiA2NS4zNTUgOC4wNDEgMTUuOTQzLTQuNjQ3IDI5LjcwMy0xNC4yNyAzNi45MDctMjguOTExIDEwLjQxMi0xOS4xOTggOC4xODEtNDIuNDM5IDguMDg4LTY4LjE0NS4yMzYtNDEuOTI3LjAwNC04My44NTQuMDA0LTEyNS45MjF6Ii8+PC9zdmc+Cg=="
                         alt="JavaScript logo">
                 </span>
-                <p class="copyright">© 2017 Mehmet Burak Erman</p>
+                <p class="copyright">©
+                    <span id="year"></span> Mehmet Burak Erman</p>
             </footer>
 
         </div>
         <!--container-->
     </div>
     <!--page-wrapper-->
+
+    <script>
+        var year = new Date().getFullYear();
+        document.getElementById("year").innerHTML = year;
+    </script>
 
     <script>
         (function (i, s, o, g, r, a, m) {
