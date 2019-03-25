@@ -127,13 +127,16 @@
         section h2 {
             display: -webkit-box;
             display: -ms-flexbox;
+            display: -webkit-flex;
             display: flex;
             -webkit-box-orient: horizontal;
             -webkit-box-direction: normal;
             -ms-flex-direction: row;
+            -webkit-flex-direction: row;
             flex-direction: row;
             -webkit-box-align: center;
             -ms-flex-align: center;
+            -webkit-align-items: center;
             align-items: center;
             color: #fff;
             margin-bottom: 20px;
@@ -163,7 +166,22 @@
             margin-bottom: 20px;
             font-size: 18px;
             font-weight: 300;
+            position: relative;
         }
+
+        section ul li:before {
+            content: "";
+            border: solid rgb(255, 255, 255);
+            border-width: 0 3px 3px 0;
+            -webkit-border-radius: 3px;
+            border-radius: 3px;
+            display: inline-block;
+            padding: 3px;
+            -webkit-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+
 
         @media screen and (max-width:768px) {
             section ul li {
@@ -261,28 +279,34 @@
             margin-top: 5px;
         }
 
-        .contact svg {
-            width: 24px;
-            height: 24px;
-            fill: #f2f2f2;
+        .contact ul li:before {
+            content: none;
         }
 
-        .contact svg:hover {
-            -webkit-transform: scale(1.2);
-            -ms-transform: scale(1.2);
-            transform: scale(1.2);
-            fill: rgba(89, 102, 125, 1);
+        .contact ul li a img {
+            width: 24px;
+            height: 24px;
+            -webkit-transition: all .2s;
+            -o-transition: all .2s;
+            transition: all .2s;
+        }
+
+        .contact ul li a img:hover {
+            opacity: 0.5;
         }
 
         footer {
             display: -webkit-box;
             display: -ms-flexbox;
+            display: -webkit-flex;
             display: flex;
             -webkit-box-align: center;
             -ms-flex-align: center;
+            -webkit-align-items: center;
             align-items: center;
             -webkit-box-pack: justify;
             -ms-flex-pack: justify;
+            -webkit-justify-content: space-between;
             justify-content: space-between;
             padding: 20px 0;
             margin-top: 50px;
@@ -354,10 +378,10 @@
         <div class="container">
             <!--container-->
 
-            <section class="landing">
+            <header class="landing">
                 <h1>Mehmet Burak Erman </h1>
                 <span>Front End Developer</span>
-            </section>
+            </header>
 
             <section class="projects-demos">
 
@@ -366,128 +390,110 @@
                 <ul>
 
                     <li>
-                        <img src="img/left-arrow.svg" />
-                        <a href="https://mburakerman.github.io/numscrubberjs/" target="_blank" rel="external">Numscrubber.js</a>
+                        <a href="https://mburakerman.github.io/numscrubberjs/" target="_blank"
+                            rel="external">Numscrubber.js</a>
                         Let's change values of input numbers by dragging the mouse left & right.</li>
 
                     <li>
-                        <img src="img/left-arrow.svg" />
-                        <a href="https://mburakerman.github.io/colortopng/" target="_blank" rel="external">ColorToPng</a>
+                        <a href="https://mburakerman.github.io/colortopng/" target="_blank"
+                            rel="external">ColorToPng</a>
                         Solid & Gradient PNG generator.</li>
 
                     <li>
-                        <img src="img/left-arrow.svg" />
                         <a href="https://mburakerman.github.io/hslcolorticker/" target="_blank" rel="external">HSL
                             Color Ticker</a> A HSL color ticker, also a picker.</li>
 
                     <li>
-                        <img src="img/left-arrow.svg" />
                         <a href="https://mburakerman.github.io/hrjs/" target="_blank" rel="external">HR.js</a> Tiny
                         JavaScript plugin for highlighting and replacing text in the DOM.</li>
 
                     <li>
-                        <img src="img/left-arrow.svg" />
                         <a href="https://www.fibaemeklilik.com.tr/" target="_blank" rel="external">Fiba Pension and
                             Life Inc.</a>
                         Official website of Fiba Pension and Life Inc.</li>
 
                     <li>
-                        <img src="img/left-arrow.svg" />
                         <a href="https://cuzdan.bkmexpress.com.tr" target="_blank" rel="external">BKM Express</a>
                         BKM Express's user dashboard website.</li>
 
                     <li>
-                        <img src="img/left-arrow.svg" />
-                        <a href="https://mburakerman.github.io/css3-checkbox-switch-generator/" target="_blank" rel="external">CSS3
+                        <a href="https://mburakerman.github.io/css3-checkbox-switch-generator/" target="_blank"
+                            rel="external">CSS3
                             Checkbox Switch Generator</a> Turn an input checkbox into a toggle without any additional
                         elements.</li>
 
                     <li>
-                        <img src="img/left-arrow.svg" />
                         <a href="https://codepen.io/mburakerman/full/wqoBeE/" target="_blank" rel="external">
                             Npm installation progress</a> Npm's installation progress bar in infinite loop.</li>
 
                     <li>
-                        <img src="img/left-arrow.svg" />
-                        <a href="https://mburakerman.github.io/firemember/" target="_blank" rel="external">Firemember</a>
+                        <a href="https://mburakerman.github.io/firemember/" target="_blank"
+                            rel="external">Firemember</a>
                         Fire in the DOM.</li>
 
                     <li>
-                        <img src="img/left-arrow.svg" />
                         <a href="https://mburakerman.github.io/aestextic/" target="_blank" rel="external">Aestextic</a>
                         Aesthetic text generator.</li>
 
                     <li>
-                        <img src="img/left-arrow.svg" />
                         <a href="https://mburakerman.github.io/reaction-gifs/" target="_blank" rel="external">Reaction
                             Gifs</a> Your responses to everything.</li>
 
                     <li>
-                        <img src="img/left-arrow.svg" />
                         <a href="https://reddit-video-downloader.surge.sh/" target="_blank" rel="external">Reddit Video
                             Downloader</a> The simplest way to download reddit videos.</li>
 
                     <!--<li>
-                        <img src="img/left-arrow.svg" />
                         <a href="https://www.facebook.com/PrittTurkiye/app/315330818929496/" target="_blank" rel="external">Küçük
                             Kahramanlar</a> Pritt's Facebook campaign application for children.</li>-->
 
                     <li>
-                        <img src="img/left-arrow.svg" />
                         <a href="https://mburakerman.github.io/clapemojigenerator/" target="_blank" rel="external">Clap
                             Emoji Generator</a> Don't stop emphasizing your point by putting clap emojis after every
                         word.</li>
 
                     <li>
-                        <img src="img/left-arrow.svg" />
                         <a href="https://mburakerman.github.io/css3textinputmaker/" target="_blank" rel="external">Css3
                             Text Input Maker</a> Make lovely text inputs.</li>
 
 
                     <li>
-                        <img src="img/left-arrow.svg" />
                         <a href="http://istanbulpsikoloji.org/" target="_blank" rel="external">İstanbul Üniversitesi
                             Psikoloji Kulübü</a> Official website of Istanbul University Psychology Club.
                     </li>
 
                     <li>
-                        <img src="img/left-arrow.svg" />
                         <a href="https://mburakerman.github.io/memorizr/" target="_blank" rel="external">Memorizr</a>
                         Animal pairs game.</li>
 
                     <li>
-                        <img src="img/left-arrow.svg" />
-                        <a href="https://mburakerman.github.io/hangmanizr/" target="_blank" rel="external">Hangmanizr</a>
+                        <a href="https://mburakerman.github.io/hangmanizr/" target="_blank"
+                            rel="external">Hangmanizr</a>
                         Quick hangman game.</li>
 
                     <li>
-                        <img src="img/left-arrow.svg" />
-                        <a href="https://mburakerman.github.io/draweditor/" target="_blank" rel="external">Draweditor</a>
+                        <a href="https://mburakerman.github.io/draweditor/" target="_blank"
+                            rel="external">Draweditor</a>
                         Draweditor is a simple free online sketching, drawing, image editing tool.</li>
 
                     <li>
-                        <img src="img/left-arrow.svg" />
                         <a href="https://mburakerman.github.io/toolgif/" target="_blank" rel="external">Toolgif</a>
                         The only GIF tooltip plugin you need.</li>
 
                     <!-- <li>
-                        <img src="img/left-arrow.svg" />
                         <a href="https://mburakerman.github.io/runicorn/" target="_blank" rel="external">Runicorn</a>
                         Mini obstacle game.</li> -->
 
                     <li>
-                        <img src="img/left-arrow.svg" />
                         <a href="https://chrome.google.com/webstore/detail/basic-to-do-list/fgkmaedaobllmdjloggjhgkgndimmahi/"
                             target="_blank" rel="external">Basic To-Do List</a> A very basic to-do list extension for
                         Google Chrome.</li>
 
                     <li>
-                        <img src="img/left-arrow.svg" />
                         <a href="https://codepen.io/mburakerman/full/wrZKwe/" target="_blank" rel="external">CSS3
                             Perspective Playground</a> Get a little perspective on your CSS.</li>
 
                     <li>
-                        <img src="img/left-arrow.svg" />
                         <a href="https://codepen.io/mburakerman/full/GmmKdL" target="_blank" rel="external">Explosive
                             Modal</a> A modal with explosion effect.</li>
 
@@ -498,14 +504,11 @@
                 <h2>
                     <img src="img/tombstone.svg" /> ABOUT</h2>
                 <ul>
-                    <li>
-                        <img src="img/left-arrow.svg" /> Born in 1994.</li>
+                    <li> Born in 1994.</li>
 
-                    <li>
-                        <img src="img/left-arrow.svg" /> Graduated from Hacettepe University Economics.</li>
+                    <li> Graduated from Hacettepe University Economics.</li>
 
-                    <li>
-                        <img src="img/left-arrow.svg" /> After starting to learn web development, i wanted to be a
+                    <li> After starting to learn web development, i wanted to be a
                         Front End Developer and now love coding
                         and following web trends day by day.</li>
                 </ul>
@@ -521,91 +524,38 @@
 
                     <li>
                         <a href="https://github.com/mburakerman" title="GitHub" target="_blank" rel="external">
-                            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"
-                                stroke-linejoin="round" stroke-miterlimit="1.414">
-                                <path d="M8 0C3.58 0 0 3.582 0 8c0 3.535 2.292 6.533 5.47 7.59.4.075.547-.172.547-.385 0-.19-.007-.693-.01-1.36-2.226.483-2.695-1.073-2.695-1.073-.364-.924-.89-1.17-.89-1.17-.725-.496.056-.486.056-.486.803.056 1.225.824 1.225.824.714 1.223 1.873.87 2.33.665.072-.517.278-.87.507-1.07-1.777-.2-3.644-.888-3.644-3.953 0-.873.31-1.587.823-2.147-.09-.202-.36-1.015.07-2.117 0 0 .67-.215 2.2.82.64-.178 1.32-.266 2-.27.68.004 1.36.092 2 .27 1.52-1.035 2.19-.82 2.19-.82.43 1.102.16 1.915.08 2.117.51.56.82 1.274.82 2.147 0 3.073-1.87 3.75-3.65 3.947.28.24.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.14.46.55.38C13.71 14.53 16 11.53 16 8c0-4.418-3.582-8-8-8" />
-                            </svg>
+                            <img src="img/github.svg" />
                         </a>
                     </li>
 
                     <li>
                         <a href="https://codepen.io/mburakerman/" title="CodePen" target="_blank" rel="external">
-                            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"
-                                stroke-linejoin="round" stroke-miterlimit="1.414">
-                                <path d="M15.988 5.443c-.004-.02-.007-.04-.012-.058l-.01-.033c-.006-.017-.012-.034-.02-.05-.003-.012-.01-.023-.014-.034l-.023-.045-.02-.032-.03-.04-.03-.03-.04-.03-.03-.02-.04-.03-.03-.02-.01-.01L8.38.12c-.23-.154-.53-.154-.76 0L.302 4.99.292 5l-.03.023-.04.032-.025.027-.034.037-.024.03-.03.04c-.01.01-.02.02-.02.03l-.03.04-.01.04c-.01.01-.01.03-.02.05l-.01.03c-.01.02-.01.04-.01.06v.03C0 5.5 0 5.53 0 5.56v4.875c0 .03.002.06.006.09l.007.03c.003.02.006.04.013.058l.01.033c.006.018.01.035.018.05l.015.033c0 .01.01.03.02.04l.02.03c.01.01.02.03.03.04l.02.03.03.03c.01.01.01.02.02.02l.04.03.03.02.01.01 7.31 4.88c.11.08.25.11.38.11s.26-.04.38-.12L15.68 11l.01-.01.03-.022.04-.03.03-.026.035-.037.024-.03.03-.04.02-.032.02-.046.01-.036.02-.05.01-.03.02-.05v-5c0-.03 0-.06-.01-.09l-.01-.03zM8 9.626L5.568 8 8 6.374 10.432 8 8 9.626zM7.312 5.18l-2.98 1.993-2.406-1.61 5.386-3.59V5.18zM3.095 8l-1.72 1.15v-2.3L3.095 8zm1.237.828l2.98 1.993v3.21l-5.386-3.59 2.406-1.61zm4.355 1.993l2.98-1.99 2.407 1.61-5.387 3.59v-3.2zM12.905 8l1.72-1.15v2.3L12.905 8zm-1.237-.827L8.688 5.18V1.97l5.386 3.59-2.406 1.61z"
-                                    fill-rule="nonzero" />
-                            </svg>
+                            <img src="img/codepen.svg" />
                         </a>
                     </li>
 
                     <li>
                         <a href="https://twitter.com/mburakerman" title="Twitter" target="_blank" rel="external">
-                            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"
-                                stroke-linejoin="round" stroke-miterlimit="1.414">
-                                <path d="M16 3.038c-.59.26-1.22.437-1.885.517.677-.407 1.198-1.05 1.443-1.816-.634.37-1.337.64-2.085.79-.598-.64-1.45-1.04-2.396-1.04-1.812 0-3.282 1.47-3.282 3.28 0 .26.03.51.085.75-2.728-.13-5.147-1.44-6.766-3.42C.83 2.58.67 3.14.67 3.75c0 1.14.58 2.143 1.46 2.732-.538-.017-1.045-.165-1.487-.41v.04c0 1.59 1.13 2.918 2.633 3.22-.276.074-.566.114-.865.114-.21 0-.41-.02-.61-.058.42 1.304 1.63 2.253 3.07 2.28-1.12.88-2.54 1.404-4.07 1.404-.26 0-.52-.015-.78-.045 1.46.93 3.18 1.474 5.04 1.474 6.04 0 9.34-5 9.34-9.33 0-.14 0-.28-.01-.42.64-.46 1.2-1.04 1.64-1.7z"
-                                    fill-rule="nonzero" />
-                            </svg>
-                        </a>
-                    </li>
-                    <!-- 
-                    <li>
-                        <a href="https://www.facebook.com/mburakerman/" title="Facebook" target="_blank" rel="external">
-                            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round"
-                                stroke-miterlimit="1.414">
-                                <path d="M15.117 0H.883C.395 0 0 .395 0 .883v14.234c0 .488.395.883.883.883h7.663V9.804H6.46V7.39h2.086V5.607c0-2.066 1.262-3.19 3.106-3.19.883 0 1.642.064 1.863.094v2.16h-1.28c-1 0-1.195.48-1.195 1.18v1.54h2.39l-.31 2.42h-2.08V16h4.077c.488 0 .883-.395.883-.883V.883C16 .395 15.605 0 15.117 0"
-                                    fill-rule="nonzero" />
-                            </svg>
+                            <img src="img/twitter.svg" />
                         </a>
                     </li>
 
-
                     <li>
-                        <a href="https://www.instagram.com/mburakerman/" title="Instagram" target="_blank" rel="external">
-                            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round"
-                                stroke-miterlimit="1.414">
-                                <path d="M8 0C5.827 0 5.555.01 4.702.048 3.85.088 3.27.222 2.76.42c-.526.204-.973.478-1.417.923-.445.444-.72.89-.923 1.417-.198.51-.333 1.09-.372 1.942C.008 5.555 0 5.827 0 8s.01 2.445.048 3.298c.04.852.174 1.433.372 1.942.204.526.478.973.923 1.417.444.445.89.72 1.417.923.51.198 1.09.333 1.942.372.853.04 1.125.048 3.298.048s2.445-.01 3.298-.048c.852-.04 1.433-.174 1.942-.372.526-.204.973-.478 1.417-.923.445-.444.72-.89.923-1.417.198-.51.333-1.09.372-1.942.04-.853.048-1.125.048-3.298s-.01-2.445-.048-3.298c-.04-.852-.174-1.433-.372-1.942-.204-.526-.478-.973-.923-1.417-.444-.445-.89-.72-1.417-.923-.51-.198-1.09-.333-1.942-.372C10.445.008 10.173 0 8 0zm0 1.44c2.136 0 2.39.01 3.233.048.78.036 1.203.166 1.485.276.374.145.64.318.92.598.28.28.453.546.598.92.11.282.24.705.276 1.485.038.844.047 1.097.047 3.233s-.01 2.39-.05 3.233c-.04.78-.17 1.203-.28 1.485-.15.374-.32.64-.6.92-.28.28-.55.453-.92.598-.28.11-.71.24-1.49.276-.85.038-1.1.047-3.24.047s-2.39-.01-3.24-.05c-.78-.04-1.21-.17-1.49-.28-.38-.15-.64-.32-.92-.6-.28-.28-.46-.55-.6-.92-.11-.28-.24-.71-.28-1.49-.03-.84-.04-1.1-.04-3.23s.01-2.39.04-3.24c.04-.78.17-1.21.28-1.49.14-.38.32-.64.6-.92.28-.28.54-.46.92-.6.28-.11.7-.24 1.48-.28.85-.03 1.1-.04 3.24-.04zm0 2.452c-2.27 0-4.108 1.84-4.108 4.108 0 2.27 1.84 4.108 4.108 4.108 2.27 0 4.108-1.84 4.108-4.108 0-2.27-1.84-4.108-4.108-4.108zm0 6.775c-1.473 0-2.667-1.194-2.667-2.667 0-1.473 1.194-2.667 2.667-2.667 1.473 0 2.667 1.194 2.667 2.667 0 1.473-1.194 2.667-2.667 2.667zm5.23-6.937c0 .53-.43.96-.96.96s-.96-.43-.96-.96.43-.96.96-.96.96.43.96.96z"
-                                />
-                            </svg>
-                        </a>
-                    </li> 
-                    -->
-
-                    <li>
-                        <a href="https://www.goodreads.com/mburakerman/" title="Goodreads" target="_blank" rel="external">
-                            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"
-                                stroke-linejoin="round" stroke-miterlimit="1.414">
-                                <path d="M13.022 10.63V.326h-1.37V2.26h-.043c-.14-.303-.32-.593-.56-.87-.24-.274-.51-.517-.82-.727-.31-.21-.64-.373-1.01-.49C8.85.06 8.46 0 8.04 0c-.805 0-1.53.15-2.16.446-.63.297-1.16.703-1.587 1.217-.427.515-.753 1.116-.978 1.804-.224.69-.337 1.417-.337 2.185 0 .797.094 1.547.283 2.25.19.703.49 1.315.91 1.837.42.52.94.93 1.58 1.22.64.29 1.41.44 2.31.44.83 0 1.55-.21 2.17-.63.62-.42 1.09-.98 1.41-1.68h.04v1.52c0 1.36-.28 2.4-.84 3.13-.56.72-1.48 1.09-2.76 1.09-.38 0-.75-.04-1.11-.12-.36-.08-.69-.21-.99-.38-.29-.18-.55-.4-.76-.69-.21-.29-.35-.64-.42-1.06H3.4c.045.59.21 1.1.49 1.53.283.43.64.78 1.066 1.06.427.27.91.47 1.445.6.54.13 1.09.2 1.66.2.92 0 1.69-.13 2.32-.37.63-.25 1.14-.6 1.53-1.07.4-.47.68-1.03.86-1.7.18-.67.28-1.42.28-2.24zm-4.98-.37c-.636 0-1.187-.126-1.65-.38-.464-.253-.85-.587-1.153-1-.31-.413-.53-.887-.68-1.423-.15-.537-.22-1.087-.22-1.653 0-.58.07-1.148.2-1.706.14-.558.36-1.055.66-1.49.3-.434.69-.786 1.15-1.054.46-.268 1.02-.402 1.67-.402s1.2.138 1.66.413c.45.276.83.638 1.12 1.087.29.45.5.95.63 1.5s.19 1.102.19 1.652c0 .566-.08 1.116-.23 1.653-.15.536-.38 1.01-.69 1.423-.31.413-.68.747-1.13 1-.45.254-.97.38-1.57.38z"
-                                    fill-rule="nonzero" />
-                            </svg>
+                        <a href="https://www.goodreads.com/mburakerman/" title="Goodreads" target="_blank"
+                            rel="external">
+                            <img src="img/goodreads.svg" />
                         </a>
                     </li>
 
                     <li>
                         <a href="https://linkedin.com/in/mburakerman/" title="LinkedIn" target="_blank" rel="external">
-                            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"
-                                stroke-linejoin="round" stroke-miterlimit="1.414">
-                                <path d="M13.632 13.635h-2.37V9.922c0-.886-.018-2.025-1.234-2.025-1.235 0-1.424.964-1.424 1.96v3.778h-2.37V6H8.51v1.04h.03c.318-.6 1.092-1.233 2.247-1.233 2.4 0 2.845 1.58 2.845 3.637v4.188zM3.558 4.955c-.762 0-1.376-.617-1.376-1.377 0-.758.614-1.375 1.376-1.375.76 0 1.376.617 1.376 1.375 0 .76-.617 1.377-1.376 1.377zm1.188 8.68H2.37V6h2.376v7.635zM14.816 0H1.18C.528 0 0 .516 0 1.153v13.694C0 15.484.528 16 1.18 16h13.635c.652 0 1.185-.516 1.185-1.153V1.153C16 .516 15.467 0 14.815 0z"
-                                    fill-rule="nonzero" />
-                            </svg>
+                            <img src="img/linkedin.svg" />
                         </a>
                     </li>
 
                     <li>
                         <a href="mailto:mburakerman@gmail.com" title="Email" target="_blank" rel="external">
-
-                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                x="0px" y="0px" width="512px" height="512px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
-                                xml:space="preserve">
-                                <g>
-                                    <path d="M448,64H64C28.656,64,0,92.656,0,128v256c0,35.344,28.656,64,64,64h384c35.344,0,64-28.656,64-64V128
-        C512,92.656,483.344,64,448,64z M342.656,234.781l135.469-116.094c0.938,3,1.875,6,1.875,9.313v256
-        c0,2.219-0.844,4.188-1.281,6.281L342.656,234.781z M448,96c2.125,0,4,0.813,6,1.219L256,266.938L58,97.219
-        C60,96.813,61.875,96,64,96H448z M33.266,390.25C32.828,388.156,32,386.219,32,384V128c0-3.313,0.953-6.313,1.891-9.313
-        L169.313,234.75L33.266,390.25z M64,416c-3.234,0-6.172-0.938-9.125-1.844l138.75-158.563l51.969,44.531
-        C248.578,302.719,252.297,304,256,304s7.422-1.281,10.406-3.875l51.969-44.531l138.75,158.563C454.188,415.062,451.25,416,448,416
-        H64z" />
-                            </svg>
-
+                            <img src="img/email.svg" />
                         </a>
                     </li>
                 </ul>
