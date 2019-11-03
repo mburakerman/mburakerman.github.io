@@ -51,6 +51,10 @@
 
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
 
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600&amp;display=swap">
+    <link rel="stylesheet" href="css/main.min.css">
+
     <meta name="google-site-verification" content="Y9rbVPxXYY8HNwYGvnqNGNC1Gku8Rp5Sn5F0eK7gl2Q" />
 
     <!-- Google / Search Engine Tags -->
@@ -73,252 +77,6 @@
     <meta name="twitter:title" content="Mehmet Burak Erman - Front End Developer">
     <meta name="twitter:description" content="Personal Portfolio Website" />
     <!-- Twitter -->
-
-    <style type="text/css">
-        @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600');
-
-        html {
-            -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-        }
-
-        *,
-        *:before,
-        *:after {
-            -webkit-box-sizing: inherit;
-            box-sizing: inherit;
-            padding: 0;
-            margin: 0;
-            text-decoration: none;
-            list-style: none;
-            letter-spacing: 2px;
-        }
-
-        body,
-        html {
-            max-width: 768px;
-            height: 100%;
-            margin: 0 auto;
-            display: table;
-            background-color: #3C4556;
-            color: #f2f2f2;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 18px;
-            font-weight: 400;
-            padding: 1.5%;
-            line-height: 1.5;
-        }
-
-        @media screen and (max-width:768px) {
-
-            body,
-            html {
-                font-size: 16px;
-            }
-        }
-
-        .page-wrapper {
-            max-width: 768px;
-            margin: 0 auto;
-            display: table-cell;
-            vertical-align: middle;
-        }
-
-        section h2 {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
-            -webkit-box-orient: horizontal;
-            -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-            -webkit-flex-direction: row;
-            flex-direction: row;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            -webkit-align-items: center;
-            align-items: center;
-            color: #fff;
-            margin-bottom: 20px;
-            border-bottom: 1px solid rgba(89, 102, 125, .5);
-            font-size: 25px;
-            font-weight: 500;
-        }
-
-        @media screen and (max-width:768px) {
-            section h2 {
-                font-size: 23px;
-            }
-        }
-
-        section h2 img {
-            width: 30px;
-            margin-right: 10px;
-        }
-
-        @media screen and (max-width:768px) {
-            section h2 img {
-                width: 25px;
-            }
-        }
-
-        section ul li {
-            margin-bottom: 20px;
-            font-size: 17px;
-            font-weight: 300;
-            position: relative;
-        }
-
-        section ul li:before {
-            content: "";
-            border: solid rgb(255, 255, 255);
-            border-width: 0 3px 3px 0;
-            -webkit-border-radius: 3px;
-            border-radius: 3px;
-            display: inline-block;
-            padding: 3px;
-            -webkit-transform: rotate(-45deg);
-            -ms-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-        }
-
-
-        @media screen and (max-width:768px) {
-            section ul li {
-                font-size: 16px;
-            }
-        }
-
-        .landing {
-            margin-bottom: 50px;
-            border-bottom: 1px solid rgba(89, 102, 125, .5);
-            position: relative;
-        }
-
-        .landing h1 {
-            position: relative;
-            text-align: center;
-            color: #fff;
-            font-size: 35px;
-            font-weight: 600;
-            width: 100%;
-            margin: 0;
-        }
-
-        @media screen and (max-width:768px) {
-            .landing h1 {
-                font-size: 32px;
-            }
-        }
-
-
-        .landing span {
-            display: block;
-            text-align: center;
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: 20px;
-            font-size: 17px;
-            font-weight: 400;
-        }
-
-        @media screen and (max-width:768px) {
-            .landing span {
-                font-size: 15px;
-            }
-        }
-
-        .projects-demos {
-            margin-bottom: 50px;
-        }
-
-        .projects-demos a {
-            color: #fff;
-            text-decoration: underline;
-        }
-
-        .projects-demos ul li img {
-            width: 10px;
-        }
-
-        .projects-demos a:hover {
-            color: #3C4556;
-            background: #fff;
-            text-decoration: none;
-        }
-
-        .about {
-            margin-bottom: 50px;
-        }
-
-        .about ul li img {
-            width: 10px;
-        }
-
-        .about .cv a {
-            color: #fff;
-            font-size: 17px;
-            text-decoration: underline;
-        }
-
-        @media screen and (max-width:768px) {
-            .about .cv a {
-                font-size: 16px;
-            }
-        }
-
-        .about .cv a:hover {
-            color: #3C4556;
-            background: #fff;
-            text-decoration: none;
-        }
-
-        .contact ul li {
-            display: inline-block;
-            margin-right: 15px;
-            margin-top: 5px;
-        }
-
-        .contact ul li:before {
-            content: none;
-        }
-
-        .contact ul li a img {
-            width: 24px;
-            height: 24px;
-            -webkit-transition: all .2s;
-            -o-transition: all .2s;
-            transition: all .2s;
-        }
-
-        .contact ul li a img:hover {
-            opacity: 0.5;
-        }
-
-        footer {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            -webkit-align-items: center;
-            align-items: center;
-            -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-            -webkit-justify-content: space-between;
-            justify-content: space-between;
-            padding: 20px 0;
-            margin-top: 50px;
-            font-size: 10px;
-            color: #f2f2f2;
-            border-top: 1px solid rgba(89, 102, 125, .5);
-        }
-
-        .footer__left img {
-            width: 25px;
-        }
-    </style>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-75826567-5"></script>
@@ -578,6 +336,10 @@
         </div>
     </div>
     <!--page-wrapper-->
+    <div class="wave-container">
+        <div class="wave"></div>
+    </div>
+
 
     <script>
         var year = new Date().getFullYear();
