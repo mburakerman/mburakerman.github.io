@@ -71,7 +71,7 @@ section h2 {
 }
 
 section h2 img {
-    width: 30px;
+    width: 35px;
     margin-right: 10px;
 }
 
@@ -157,12 +157,16 @@ section ul li:before {
     -o-transition: all .2s;
     transition: all .2s;
 }
-
-
 .projects-demos a:hover {
     color: #3C4556;
     background: #fff;
     text-decoration: none;
+}
+
+.projects-demos sup {
+    font-size: 12px;
+    letter-spacing: normal;
+    opacity: .5;
 }
 
 .projects-demos ul li img {
@@ -236,7 +240,7 @@ footer {
 }
 
 .footer__left img {
-    width: 25px;
+    width: 35px;
 }
 
 
