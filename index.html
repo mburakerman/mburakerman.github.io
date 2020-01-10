@@ -33,7 +33,7 @@
 
     <title>Mehmet Burak Erman - Front End Developer</title>
 
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <link rel="icon" data-emoji="🧛🏽‍♂️" type="image/x-icon" />
 
     <link rel="dns-prefetch" href="https://fonts.googleapis.com/">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600&amp;display=swap">
@@ -61,6 +61,23 @@
     <meta name="twitter:title" content="Mehmet Burak Erman - Front End Developer">
     <meta name="twitter:description" content="Personal Portfolio Website" />
     <!-- Twitter -->
+
+    <script>
+        // emoji as favicon
+        var favicon = document.querySelector("link[rel=icon]");
+        if (favicon) {
+            var emoji = favicon.getAttribute("data-emoji");
+            if (emoji) {
+                var canvas = document.createElement("canvas");
+                canvas.height = 64;
+                canvas.width = 64;
+                var ctx = canvas.getContext("2d");
+                ctx.font = "64px serif";
+                ctx.fillText(emoji, 0, 64);
+                favicon.href = canvas.toDataURL();
+            }
+        }
+    </script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-75826567-5"></script>
