@@ -28,7 +28,7 @@ html {
     font-weight: 400;
     padding: 1.5%;
     line-height: 1.5;
-    border-radius: 50% 50px;
+    border-radius: 35px;
 }
 
 @media screen and (max-width:768px) {
@@ -241,61 +241,4 @@ footer {
 
 .footer__left img {
     width: 35px;
-}
-
-
-
-
-/* wave */
-.wave-container {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    border-radius: 5px;
-    background-image: -o-linear-gradient(bottom, #3C4556 0%, #3C4556 100%);
-    background-image: -webkit-gradient(linear, left bottom, left top, from(#3C4556), to(#3C4556));
-    background-image: linear-gradient(to top, #3C4556 0%, #3C4556 100%);
-    overflow: hidden;
-    opacity: .5;
-    z-index: -1;
-}
-
-.wave {
-    width: 1000px;
-    height: 1025px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-left: -500px;
-    margin-top: -500px;
-    border-radius: 35%;
-    background: rgba(255, 255, 255, .75);
-    -webkit-animation: wave 15s infinite linear;
-    animation: wave 15s infinite linear;
-}
-
-@-webkit-keyframes wave {
-    from {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-
-    from {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes wave {
-    from {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-    }
-
-    from {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
 }
