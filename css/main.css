@@ -12,7 +12,7 @@ html {
     margin: 0;
     text-decoration: none;
     list-style: none;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
 }
 
 body,
@@ -32,7 +32,6 @@ html {
 }
 
 @media screen and (max-width:768px) {
-
     body,
     html {
         font-size: 16px;
@@ -66,7 +65,7 @@ section h2 {
 
 @media screen and (max-width:768px) {
     section h2 {
-        font-size: 23px;
+        font-size: 22px;
     }
 }
 
@@ -125,7 +124,7 @@ section ul li:before {
 
 @media screen and (max-width:768px) {
     .landing h1 {
-        font-size: 32px;
+        font-size: 30px;
     }
 }
 
