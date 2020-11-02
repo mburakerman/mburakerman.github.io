@@ -126,26 +126,26 @@ section ul li:before {
 }
 
 
-/* project-demos */
-.projects-demos {
+/* project */
+.projects {
     margin-bottom: 50px;
 }
-.projects-demos a {
+.projects a {
     color: #fff;
     text-decoration: underline;
     transition: all .2s;
 }
-.projects-demos a:hover {
+.projects a:hover {
     color: var(--mainColor);
     background: #fff;
     text-decoration: none;
 }
-.projects-demos sup {
+.projects sup {
     font-size: 12px;
     letter-spacing: normal;
     opacity: .5;
 }
-.projects-demos ul li img {
+.projects ul li img {
     width: 10px;
 }
 
@@ -203,6 +203,7 @@ footer {
     color: var(--mainTextColor);
     border-top: 1px solid var(--borderColor);
 }
-.footer__left img {
+.footer__right img {
     width: 35px;
+    cursor: pointer;
 }
