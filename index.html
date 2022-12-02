@@ -147,16 +147,22 @@
         <section class="projects">
           <h2>
             <img src="img/candies.svg" loading="lazy" alt="Projects" /> PROJECTS
+            <button
+              id="toggleWorkProjectsButton"
+              onclick="toggleWorkProjects()"
+            >
+              Show Work Projects
+            </button>
           </h2>
           <ul>
-            <li>
+            <li class="work-project">
               <a href="https://scoutium.com/" target="_blank" rel="external"
                 >Scoutium</a
               >
               Official website of Scoutium.
             </li>
 
-            <li>
+            <li class="work-project">
               <a
                 href="https://www.fibabanka.com.tr/"
                 target="_blank"
@@ -166,7 +172,7 @@
               Official website of Fibabanka.
             </li>
 
-            <li>
+            <li class="work-project">
               <a
                 href="https://www.fibaemeklilik.com.tr/"
                 target="_blank"
@@ -176,7 +182,7 @@
               Official website of Fiba Pension and Life Inc.
             </li>
 
-            <li>
+            <li class="work-project">
               <a
                 href="https://cuzdan.bkmexpress.com.tr"
                 target="_blank"
@@ -205,6 +211,17 @@
                 >Virusnake</a
               >
               A snake game.
+            </li>
+
+            <li>
+              <a
+                href="https://mburakerman.github.io/hrjs/"
+                target="_blank"
+                rel="external"
+                >HR.js</a
+              >
+              Tiny JavaScript plugin for highlighting and replacing text in the
+              DOM.
             </li>
 
             <li>
@@ -240,6 +257,26 @@
 
             <li>
               <a
+                href="https://mburakerman.github.io/reactplosive-modal/"
+                target="_blank"
+                rel="external"
+                >Reactplosive Modal</a
+              >
+              A simple React modal component with an explosion effect
+            </li>
+
+            <li>
+              <a
+                href="https://mburakerman.github.io/colortopng/"
+                target="_blank"
+                rel="external"
+                >ColorToPng</a
+              >
+              Solid & Gradient PNG generator.
+            </li>
+
+            <li>
+              <a
                 href="https://mburakerman.github.io/tensorflowjs-webcam-transfer-learning/"
                 target="_blank"
                 rel="external"
@@ -256,27 +293,6 @@
                 >Emojion AI</a
               >
               Sentiment analysis with emojis.
-            </li>
-
-            <li>
-              <a
-                href="https://mburakerman.github.io/colortopng/"
-                target="_blank"
-                rel="external"
-                >ColorToPng</a
-              >
-              Solid & Gradient PNG generator.
-            </li>
-
-            <li>
-              <a
-                href="https://mburakerman.github.io/hrjs/"
-                target="_blank"
-                rel="external"
-                >HR.js</a
-              >
-              Tiny JavaScript plugin for highlighting and replacing text in the
-              DOM.
             </li>
 
             <li>
@@ -549,8 +565,22 @@
     </div>
 
     <script>
-      var year = new Date().getFullYear();
-      document.getElementById("year").innerHTML = year;
+      document.getElementById("year").innerHTML = new Date().getFullYear();
+
+      function toggleWorkProjects() {
+        const toggleWorkProjectsButton = document.getElementById(
+          "toggleWorkProjectsButton"
+        );
+
+        toggleWorkProjectsButton.textContent =
+          toggleWorkProjectsButton.textContent.trim() === "Show Work Projects"
+            ? "Hide Work Projects"
+            : "Show Work Projects";
+
+        for (const wp of document.getElementsByClassName("work-project")) {
+          wp.classList.toggle("isVisible");
+        }
+      }
     </script>
   </body>
 </html>
