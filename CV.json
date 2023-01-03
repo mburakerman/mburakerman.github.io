@@ -83,8 +83,8 @@
       "location": "Istanbul, Turkey",
       "position": "Junior Frontend Developer",
       "website": "",
-      "startDate": "",
-      "endDate": "",
+      "startDate": "Jun 2017",
+      "endDate": "Aug 2017",
       "highlights": [
         "Developed Facebook Advertising Games using HTML, CSS and JavaScript",
         "Technology Stack: HTML, CSS, JavaScript, jQuery"
@@ -122,9 +122,9 @@
   "awards": [
     {
       "date": "2019",
-      "title": "Third Place Award",
       "awarder": "Golden Spider Awards",
-      "summary": "fibabanka.com.tr has been awarded the 'Third Place Award' by 17th Golden Spider Awards.  Golden Spider Awards is an independent organization to promote successful projects using the web, digital marketing, and mobile technologies and encourage investments in this field to find the place they deserve."
+      "summary": " has been awarded the 'Third Place Award' by 17th Golden Spider Awards.  Golden Spider Awards is an independent organization to promote successful projects using the web, digital marketing, and mobile technologies and encourage investments in this field to find the place they deserve.",
+      "title": "fibabanka.com.tr"
     }
   ],
   "sections": [
