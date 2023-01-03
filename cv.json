@@ -1,0 +1,139 @@
+{
+  "selectedTemplate": 2,
+  "headings": {
+    "work": "Experience",
+    "skills": "",
+    "projects": ""
+  },
+  "basics": {
+    "name": "Mehmet Burak Erman",
+    "email": "mburakerman@gmail.com",
+    "website": "https://mburakerman.github.io/"
+  },
+  "education": [
+    {
+      "institution": "Hacettepe University",
+      "location": "Turkey",
+      "area": "Economics",
+      "startDate": "Sep 2012",
+      "endDate": "Jan 2017",
+      "gpa": ""
+    },
+    {
+      "institution": "Hochschule Worms",
+      "area": "Erasmus Programme",
+      "startDate": "Aug 2014",
+      "endDate": "Feb 2015",
+      "location": "Germany"
+    }
+  ],
+  "work": [
+    {
+      "highlights": [
+        " "
+      ],
+      "company": "Ariana Suisse SA",
+      "position": "Frontend Developer",
+      "location": "Switzerland",
+      "startDate": "Aug 2022",
+      "endDate": "Present"
+    },
+    {
+      "highlights": [
+        "Developed and maintained Nuxt.js and Next.js apps.",
+        "Rebuilt new match analysis dashboard from scratch.",
+        "Refactored and implemented new features.",
+        "Started to migrate Nuxt.js App from JavaScript to TypeScript.",
+        "Technology Stack: HTML, CSS, SASS, JavaScript, TypeScript, Vue, React, Nuxt.js, Next.js, Styled Components, Vuetify, Figma"
+      ],
+      "company": "Scoutium",
+      "startDate": "Apr 2018",
+      "endDate": "Jul 2021 ",
+      "location": "Istanbul, Turkey",
+      "position": "Frontend Developer"
+    },
+    {
+      "highlights": [
+        "Developed and maintained whole frontend structure of high-traffic websites: Fibabanka, Fiba Pension and Life Inc., Türkiye Sigorta",
+        "Impelemented websites to The Sitefinity CMS.",
+        "Fibabanka has been awarded the \"Third Place Award\" by 17th Golden Spider Awards.",
+        "Developed BKM Express user dashboard with Vue and Vuex which is the largest e-wallet platform in Turkey.",
+        "Technology Stack: HTML, Pug, CSS, Sass, Stylus, JavaScript, TypeScript, jQuery, Handlebars, Vue, React, The Sitefinity CMS, Zeplin, Figma"
+      ],
+      "company": "Zero Studios",
+      "position": "Frontend Developer",
+      "location": "Istanbul, Turkey",
+      "startDate": "Apr 2018",
+      "endDate": "July 2021"
+    },
+    {
+      "highlights": [
+        "Developed and maintained high-traffic marketing websites",
+        "Coded fully responsive landing pages",
+        "Technology Stack: HTML, CSS, JavaScript, jQuery, Bootstrap"
+      ],
+      "position": "Junior Frontend Developer",
+      "company": "Puxo Digital Experience",
+      "startDate": "Aug 2017",
+      "endDate": "Apr 2018",
+      "location": "Istanbul, Turkey"
+    },
+    {
+      "company": "Kaoda",
+      "location": "Istanbul, Turkey",
+      "position": "Junior Frontend Developer",
+      "website": "",
+      "startDate": "",
+      "endDate": "",
+      "highlights": [
+        "Developed Facebook Advertising Games using HTML, CSS and JavaScript",
+        "Technology Stack: HTML, CSS, JavaScript, jQuery"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "level": "",
+      "keywords": [
+        "JavaScript",
+        "TypeScript",
+        "React",
+        "Vue",
+        "Next.js",
+        "Nuxt.js",
+        "CSS",
+        "Sass",
+        "Tailwind CSS",
+        "GraphQL",
+        "Go"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "",
+      "description": "",
+      "url": "",
+      "keywords": [
+        ""
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "date": "2019",
+      "title": "Third Place Award",
+      "awarder": "Golden Spider Awards",
+      "summary": "fibabanka.com.tr has been awarded the 'Third Place Award' by 17th Golden Spider Awards.  Golden Spider Awards is an independent organization to promote successful projects using the web, digital marketing, and mobile technologies and encourage investments in this field to find the place they deserve."
+    }
+  ],
+  "sections": [
+    "templates",
+    "profile",
+    "work",
+    "skills",
+    "education",
+    "projects",
+    "awards"
+  ]
+}
