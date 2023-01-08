@@ -131,13 +131,13 @@ section ul li:before {
 }
 .projects a {
   color: #fff;
-  text-decoration: underline;
+  text-decoration: none;
+  border-bottom: 1px solid #fff;
   transition: all 0.2s;
 }
 .projects a:hover {
   color: var(--mainColor);
   background: #fff;
-  text-decoration: none;
 }
 .projects sup {
   font-size: 12px;
