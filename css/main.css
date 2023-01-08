@@ -103,6 +103,7 @@ section ul li {
   font-size: 16px;
   font-weight: 300;
   position: relative;
+  display: block;
 }
 section ul li:before {
   content: "";
