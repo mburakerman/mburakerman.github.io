@@ -106,7 +106,7 @@ section ul li {
 }
 section ul li:before {
   content: "";
-  border: solid rgb(255, 255, 255);
+  border: solid #59667d;
   border-width: 0 3px 3px 0;
   border-radius: 3px;
   display: inline-block;
