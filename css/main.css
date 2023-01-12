@@ -181,7 +181,7 @@ section ul li:before {
 .about .cv a {
   color: #fff;
   font-size: 17px;
-  text-decoration: underline;
+  border-bottom: 1px solid #fff;
 }
 @media screen and (max-width: 768px) {
   .about .cv a {
