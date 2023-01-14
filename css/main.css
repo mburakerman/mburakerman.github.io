@@ -147,22 +147,6 @@ section ul li:before {
 .projects ul li img {
   width: 10px;
 }
-#toggleWorkProjectsButton {
-  font-size: 12px;
-  border: none;
-  border-radius: 3px;
-  text-align: center;
-  color: var(--mainColor);
-  background-color: #fff;
-  padding: 3px 6px;
-  margin-left: auto;
-  opacity: 0.9;
-  cursor: pointer;
-}
-#toggleWorkProjectsButton:hover {
-  opacity: 1;
-  transition: all 0.1s;
-}
 
 .work-project {
   display: none;

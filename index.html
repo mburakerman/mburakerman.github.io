@@ -45,7 +45,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600&amp;display=swap"
     />
-    <link rel="stylesheet" href="css/main.css?v=2.25" />
+    <link rel="stylesheet" href="css/main.css?v=2.26" />
 
     <meta
       name="google-site-verification"
@@ -147,51 +147,8 @@
         <section class="projects">
           <h2>
             <img src="img/candies.svg" loading="lazy" alt="Projects" /> PROJECTS
-            <button
-              id="toggleWorkProjectsButton"
-              onclick="toggleWorkProjects()"
-            >
-              Show Work Projects
-            </button>
           </h2>
           <ul>
-            <li class="work-project">
-              <a href="https://scoutium.com/" target="_blank" rel="external"
-                >Scoutium</a
-              >
-              Official website of Scoutium.
-            </li>
-
-            <li class="work-project">
-              <a
-                href="https://www.fibabanka.com.tr/"
-                target="_blank"
-                rel="external"
-                >Fibabanka</a
-              >
-              Official website of Fibabanka.
-            </li>
-
-            <li class="work-project">
-              <a
-                href="https://www.fibaemeklilik.com.tr/"
-                target="_blank"
-                rel="external"
-                >Fiba Pension and Life Inc.</a
-              >
-              Official website of Fiba Pension and Life Inc.
-            </li>
-
-            <li class="work-project">
-              <a
-                href="https://cuzdan.bkmexpress.com.tr"
-                target="_blank"
-                rel="external"
-                >BKM Express</a
-              >
-              BKM Express's user dashboard website.
-            </li>
-
             <li>
               <a
                 href="https://twitter-trends.vercel.app/"
@@ -526,23 +483,8 @@
       </div>
     </div>
 
-    <script>
+    <script defer>
       document.getElementById("year").innerHTML = new Date().getFullYear();
-
-      function toggleWorkProjects() {
-        const toggleWorkProjectsButton = document.getElementById(
-          "toggleWorkProjectsButton"
-        );
-
-        toggleWorkProjectsButton.textContent =
-          toggleWorkProjectsButton.textContent.trim() === "Show Work Projects"
-            ? "Hide Work Projects"
-            : "Show Work Projects";
-
-        for (const wp of document.getElementsByClassName("work-project")) {
-          wp.classList.toggle("isVisible");
-        }
-      }
     </script>
   </body>
 </html>
