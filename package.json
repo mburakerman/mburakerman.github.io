@@ -1,0 +1,22 @@
+{
+  "name": "mburakerman.github.io",
+  "version": "1.0.0",
+  "description": "> Personal Portfolio Website",
+  "scripts": {
+    "partytown": "partytown copylib ./~partytown"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mburakerman/mburakerman.github.io.git"
+  },
+  "keywords": [],
+  "author": "mburakerman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mburakerman/mburakerman.github.io/issues"
+  },
+  "homepage": "https://github.com/mburakerman/mburakerman.github.io#readme",
+  "dependencies": {
+    "@builder.io/partytown": "^0.7.4"
+  }
+}
