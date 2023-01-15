@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "> Personal Portfolio Website",
   "scripts": {
-    "partytown": "partytown copylib ./~partytown"
+    "partytown": "partytown copylib ./partytown"
   },
   "repository": {
     "type": "git",
