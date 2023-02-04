@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Web Rendering Techniques</title>
+  <link rel="stylesheet" href="/_astro/index.d44c66dc.css" /></head>
+  <body>
+    <article class="blog-article">
+      <h1 id="web-rendering-techniques">Web Rendering Techniques</h1>
+<p>We find ourselves in an era where a new JavaScript framework was born, bringing exciting possibilities to the web development landscape.</p>
+<p>However, its complexity can be overwhelming, especially for those new to the field.</p>
+<p>In order to ease this challenge, this blog post simplifies 10 web rendering methods for your convenience.</p>
+<br>
+<h2 id="1-static">1. Static <img src="/web-rendering-techniques/732212.png" alt="732212.png"></h2>
+<ul>
+<li>upload your static files (like html) on server and it’s done</li>
+<li>some sitatic site generators like jekyl can convert markdown into sitatic files.
+so you don’t need you write html code</li>
+<li>😔 not good for websites that frequently update their content</li>
+</ul>
+<br>
+<br>
+<h2 id="2-mpa-multi-page-application">2. MPA (Multi Page Application) <img src="/web-rendering-techniques/2560px-Logo.min.svg.png" alt="2560px-Logo.min.svg.png"></h2>
+<ul>
+<li>(MPA) is a type of web application where each web page corresponds to a different URL.
+this means that when a user navigates to different parts of the application,
+the browser sends a request to the server for a new HTML document,
+which is then rendered in the browser.</li>
+<li>😔 whenever user navigates new page, browser have to request new html,
+css, ,js from the server</li>
+</ul>
+<br>
+<br>
+<h2 id="3-spa-single-page-application-">3. SPA (Single Page Application) <img src="/web-rendering-techniques/React-icon.svg.png" alt="React-icon.svg.png"> <img src="/web-rendering-techniques/Vue.js_Logo_2.svg.png" alt="Vue.js_Logo_2.svg.png"></h2>
+<ul>
+<li>unlike MPA, SPA loads single html page and all UI changes happen with javascript</li>
+<li>😔 since all UI updated requires javascript, initial page loads can be very slow</li>
+<li>😔 not search engine friendly</li>
+</ul>
+<br>
+<br>
+<h2 id="4-ssr-server-side-rendering-">4. SSR (Server Side Rendering) <img src="/web-rendering-techniques/Next.js_Logotype_Light_Background.svg.png" alt="Next.js_Logotype_Light_Background.svg.png"> <img src="/web-rendering-techniques/1.png" alt="1.png"></h2>
+<ul>
+<li>SSR means rendering web pages on the server before sending them to the browser</li>
+<li>after initial page load, hydration happens to make web page intractive</li>
+<li>SSR is like MPA + SPA</li>
+<li>😔 server cost</li>
+</ul>
+<br>
+<br>
+<h2 id="5-streaming-ssr">5. Streaming SSR <img src="/web-rendering-techniques/Next.js_Logotype_Light_Background.svg%201.png" alt="Next.js_Logotype_Light_Background.svg.png"></h2>
+<ul>
+<li>allows us to send components down to the client as soon as they’ve been generated</li>
+<li>with regular SSR, the user has to wait for the entire HTML to be generated on the server
+before it gets send down to the client. before hydration could begin, the entire bundle
+had to be downloaded and executed</li>
+<li>however, with streaming SSR, the components get streamed down as soon as they’re ready.
+so UI became interactive faster</li>
+<li>😔 may result in more network traffic compared to traditional server rendering,
+as the browser receives HTML in chunks instead of a single response</li>
+</ul>
+<br>
+<br>
+<h2 id="6-ssg-static-site-generation">6. SSG (Static Site Generation) <img src="/web-rendering-techniques/gatsby-logo-1A245AD37F-seeklogo.com.png" alt="gatsby-logo-1A245AD37F-seeklogo.com.png"></h2>
+<ul>
+<li>pre-built your html, css and js files and serve them as static files</li>
+<li>like SSR, hydration happen after initial page load</li>
+<li>great choice for where majority of website is static.
+e.g. an e-commerce website. while the product page is dynamic, we can pre-render
+rest of the static pages on server and use external api for product page
+to load dynamic data</li>
+<li>😔 have to deptoy whenever your static data changes</li>
+</ul>
+<br>
+<br>
+<p><img src="/web-rendering-techniques/Next.js_Logotype_Light_Background.svg%202.png" alt="Next.js_Logotype_Light_Background.svg.png"></p>
+<h2 id="7-isr-incremental-static-regeneration">7. ISR (Incremental Static Regeneration)</h2>
+<ul>
+<li>allows you to create or update content without redeploying your site</li>
+<li>it’s like improved version of SSG. because we have to deploy SSG app
+even we have small change in the app.
+with ISR, the SSG will only regenerate the specific pages or sections of the site
+that have been updated, rather than regenerating the entire site.
+if revalidation is set for example 10 seconds, after first request page is regenerated</li>
+<li>😔 with ISR, there is no guarantee that user sees the latest version</li>
+</ul>
+<br>
+<br>
+<h2 id="8-partial-hydration-">8. Partial Hydration <img src="/web-rendering-techniques/Vitejs-logo.svg" alt="Vitejs-logo.svg"> <img src="/web-rendering-techniques/Next.js_Logotype_Light_Background.svg%203.png" alt="Next.js_Logotype_Light_Background.svg.png"></h2>
+<ul>
+<li>hydrate selected part of the website instead of all using code splitting</li>
+<li>for example we can leave footer static until user scrolls to bottom.
+when user reaches, we hydrate it</li>
+<li>😔 can make testing harder and cause content shifting</li>
+</ul>
+<br>
+<br>
+<h2 id="9-islands">9. Islands <img src="/web-rendering-techniques/full-logo-light.svg" alt="full-logo-light.svg"></h2>
+<ul>
+<li>general idea of an “islands” architecture is: render HTML pages on the server,
+and inject placeholders or slots around highly dynamic regions</li>
+<li>rather than a single application being in control of full-page rendering,
+there are multiple entry points</li>
+<li>it’s like better version of code-splitting</li>
+<li>may seem similar to “micro-frontends”</li>
+<li>with islands you start with static HTML and then only use javascript to hydrate
+interactive component. if component/page has no js interactivity</li>
+<li>we don’t load javascript to the client at all even you build your app
+with react.js using astro</li>
+<li>😔 relies on each island being independent, which can make it harder
+to share functionality between islands</li>
+</ul>
+<br>
+<br>
+<h2 id="10-resumability">10. Resumability <img src="/web-rendering-techniques/68747470733a2f2f63646e2e6275696c6465722e696f2f6170692f76312f696d6167652f617373657473253246594a494762346930316a7677305352644c3542742532463636376162366332323833643463346438373866623930383361616363313066.png" alt="68747470733a2f2f63646e2e6275696c6465722e696f2f6170692f76312f696d6167652f617373657473253246594a494762346930316a7677305352644c3542742532463636376162366332323833643463346438373866623930383361616363313066.png"></h2>
+<ul>
+<li>resumability is about pausing execution in the server and resuming execution
+in the client without having to replay and download all of the application logic</li>
+<li>all website serialized into html. like data, event listeners… javascript code
+broken into tiny chunks and initial page load is always static html.
+there is no hydration</li>
+<li>everything is lazy-loaded.
+so how does so many chunk of javascript files know when to execute?
+they know it because of serialization</li>
+<li>you don’t ship javascript unless user interact with it.
+for example if we have counter button made with react,
+we don’t load javascript unless user click to button</li>
+</ul>
+    </article>
+  </body></html>
