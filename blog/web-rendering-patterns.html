@@ -93,7 +93,7 @@
 <body>
   <article class="blog-article">
     <h1 id="web-rendering-patterns">Web Rendering Patterns</h1>
-    <p><time>🗓️ 13 Jan 2022</time></p>
+    <p><time>🗓️ 13 Jan 2023</time></p>
     <p>
       <br />
     </p>
@@ -172,7 +172,7 @@
         JavaScript
       </li>
       <li>
-        😔 Since all UI updates requires JavaScript, initial page loads can be
+        😔 Since all UI updates requires javascript, initial page loads can be
         very slow
       </li>
       <li>😔 Not search engine friendly (yes, still 🤦🏼‍♂️)</li>
@@ -208,18 +208,16 @@
         generated
       </li>
       <li>
-        with regular SSR, the user has to wait for the entire HTML to be
-        generated on the server before it gets send down to the client. before
-        hydration could begin, the entire bundle had to be downloaded and
-        executed
+        With regular SSR, the user has to wait for the entire html to be
+        generated on the server before it gets send down to the client
       </li>
       <li>
-        however, with streaming SSR, the components get streamed down as soon as
-        they’re ready. so UI became interactive faster
+        However, with streaming SSR, the components get streamed down as soon as
+        they’re ready. So UI became interactive faster
       </li>
       <li>
-        😔 may result in more network traffic compared to traditional server
-        rendering, as the browser receives HTML in chunks instead of a single
+        😔 May result in more network traffic compared to traditional server
+        rendering, as the browser receives html in chunks instead of a single
         response
       </li>
     </ul>
@@ -233,16 +231,17 @@
     </h2>
     <ul>
       <li>
-        pre-built your html, css and js files and serve them as static files
+        Pre-built your html, css and javascript files and serve them as static
+        files
       </li>
-      <li>like SSR, hydration happen after initial page load</li>
+      <li>Like SSR, hydration occur after initial page load</li>
       <li>
-        great choice for where majority of website is static. e.g. an e-commerce
-        website. while the product page is dynamic, we can pre-render rest of
-        the static pages on server and use external api for product page to load
-        dynamic data
+        Great choice for where majority of website is static. <br />
+        Imagine an e-commerce website: while the product page is dynamic, we can
+        pre-render rest of the static pages on server and use external api for
+        product page to load dynamic data
       </li>
-      <li>😔 have to deptoy whenever your static data changes</li>
+      <li>😔 Have to deptoy whenever your static data changes</li>
     </ul>
 
     <br />
@@ -257,15 +256,16 @@
         Allows you to create or update content without redeploying your site
       </li>
       <li>
-        It’s like improved version of SSG. because we have to deploy SSG app
-        even we have small change in the app. with ISR, the SSG will only
-        regenerate the specific pages or sections of the site that have been
-        updated, rather than regenerating the entire site. if revalidation is
-        set for example 10 seconds, after first request page is regenerated
+        It’s like improved version of SSG because we have to deploy SSG app even
+        we have small change in the app.
       </li>
       <li>
-        😔 With ISR, there is no guarantee that user sees the latest version
+        With ISR, the SSG will only regenerate the specific pages or sections of
+        the site that have been updated, rather than regenerating the entire
+        site. E.g. If revalidation is set 10 seconds, the page will be
+        regenerated after the first request
       </li>
+      <li>😔 There is no guarantee that user sees the latest version</li>
     </ul>
 
     <br />
@@ -281,7 +281,7 @@
         Hydrate selected part of the website instead of all using code splitting
       </li>
       <li>
-        For eg. we can leave footer static until user scrolls to bottom and when
+        E.g. we can leave footer static until user scrolls to bottom and when
         user reaches, we can hydrate it
       </li>
       <li>😔 Can make testing harder and cause content shifting</li>
@@ -344,9 +344,9 @@
         application logic
       </li>
       <li>
-        All website serialized into htmL. For eg. data, event listeners…
-        Javascript code broken into tiny chunks and initial page load is always
-        static html. There is no hydration
+        All website serialized into html (data, event listeners…). Javascript
+        code broken into tiny chunks and initial page load is always static
+        html. There is no hydration
       </li>
       <li>Everything is lazy loaded.</li>
       <li>
@@ -354,9 +354,9 @@
         execute? They know it because of serialization
       </li>
       <li>
-        It doesn't ship javascript unless user interact with it. For example
-        imagine we have Counter button made with React. We don’t load javascript
-        unless user click to button
+        It doesn't ship javascript unless user interact with it. Imagine we have
+        Counter button made with React. We don’t load javascript unless user
+        click to button
       </li>
     </ul>
   </article>
