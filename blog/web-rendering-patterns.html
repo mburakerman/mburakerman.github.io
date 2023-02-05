@@ -109,8 +109,10 @@
       In order to ease this challenge, this blog post simplifies 10 Web
       Rendering Patterns for your convenience.
     </p>
+
     <br />
     <br />
+
     <h2 id="1-static">
       1. Static
       <img src="/img/web-rendering-patterns/html-5.svg" alt="HTML 5" />
@@ -130,8 +132,10 @@
       </li>
       <li>😔 Not good for websites that frequently update their content</li>
     </ul>
+
     <br />
     <br />
+
     <h2 id="2-mpa-multi-page-application">
       2. MPA (Multi Page Application)
       <img src="/img/web-rendering-patterns/laravel.png" alt="Laravel" />
@@ -153,8 +157,10 @@
       </li>
       <li>😔 Less seamless UX</li>
     </ul>
+
     <br />
     <br />
+
     <h2 id="3-spa-single-page-application-">
       3. SPA (Single Page Application)
       <img src="/img/web-rendering-patterns/react.png" alt="React" />
@@ -171,8 +177,10 @@
       </li>
       <li>😔 Not search engine friendly (yes, still 🤦🏼‍♂️)</li>
     </ul>
+
     <br />
     <br />
+
     <h2 id="4-ssr-server-side-rendering-">
       4. SSR (Server Side Rendering)
       <img src="/img/web-rendering-patterns/next.png" alt="Next" />
@@ -186,8 +194,10 @@
       <li>SSR is like MPA + SPA</li>
       <li>😔 Server cost</li>
     </ul>
+
     <br />
     <br />
+
     <h2 id="5-streaming-ssr">
       5. Streaming SSR
       <img src="/img/web-rendering-patterns/next.png" alt="Next" />
@@ -213,8 +223,10 @@
         response
       </li>
     </ul>
+
     <br />
     <br />
+
     <h2 id="6-ssg-static-site-generation">
       6. SSG (Static Site Generation)
       <img src="/img/web-rendering-patterns/gatsby.png" alt="Gatsby" />
@@ -232,8 +244,10 @@
       </li>
       <li>😔 have to deptoy whenever your static data changes</li>
     </ul>
+
     <br />
     <br />
+
     <h2 id="7-isr-incremental-static-regeneration">
       7. ISR (Incremental Static Regeneration)
       <img src="/img/web-rendering-patterns/next.png" alt="Next" />
@@ -253,8 +267,10 @@
         😔 With ISR, there is no guarantee that user sees the latest version
       </li>
     </ul>
+
     <br />
     <br />
+
     <h2 id="8-partial-hydration-">
       8. Partial Hydration
       <img src="/img/web-rendering-patterns/vite.svg" alt="Vite" />
@@ -270,8 +286,10 @@
       </li>
       <li>😔 Can make testing harder and cause content shifting</li>
     </ul>
+
     <br />
     <br />
+
     <h2 id="9-islands">
       9. Islands <img src="/img/web-rendering-patterns/astro.svg" alt="Astro" />
     </h2>
@@ -311,8 +329,10 @@
         share functionality between islands
       </li>
     </ul>
+
     <br />
     <br />
+
     <h2 id="10-resumability">
       10. Resumability
       <img src="/img/web-rendering-patterns/qwik.png" alt="Qwik.png" />
@@ -324,18 +344,19 @@
         application logic
       </li>
       <li>
-        all website serialized into html. like data, event listeners… javascript
-        code broken into tiny chunks and initial page load is always static
-        html. there is no hydration
+        All website serialized into htmL. For eg. data, event listeners…
+        Javascript code broken into tiny chunks and initial page load is always
+        static html. There is no hydration
+      </li>
+      <li>Everything is lazy loaded.</li>
+      <li>
+        So, how do these multiple chunks of JavaScript files determine when to
+        execute? They know it because of serialization
       </li>
       <li>
-        everything is lazy-loaded. so how does so many chunk of javascript files
-        know when to execute? they know it because of serialization
-      </li>
-      <li>
-        you don’t ship javascript unless user interact with it. for example if
-        we have counter button made with react, we don’t load javascript unless
-        user click to button
+        It doesn't ship javascript unless user interact with it. For example
+        imagine we have Counter button made with React. We don’t load javascript
+        unless user click to button
       </li>
     </ul>
   </article>
