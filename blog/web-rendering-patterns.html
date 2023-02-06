@@ -339,6 +339,10 @@
     </h2>
     <ul>
       <li>
+        Qwik believes hydration can be expensive because large amount of
+        javascript have to execute before the page is actually interactive
+      </li>
+      <li>
         <a
           href="https://qwik.builder.io/docs/concepts/resumable/"
           target="_blank"
@@ -346,9 +350,9 @@
         >
           Resumability
         </a>
-        is about pausing execution in the server and resuming execution in the
-        client without having to replay and download all of the application
-        logic
+        aims to deliver html, and have the application interactive immediately
+        after delivering the html, basically skipping all the work involved with
+        hydration
       </li>
       <li>
         All website serialized into html (data, event listeners etc.) Javascript
@@ -357,13 +361,13 @@
       </li>
       <li>Everything is lazy loaded</li>
       <li>
-        So, how do these multiple chunks of javascript files determine when to
-        execute? They know it because of serialization
-      </li>
-      <li>
         Javascript is not shipped until the user interacts with it. Take a React
         Counter button as an example. Javascript for the button is not loaded
         until the user clicks it
+      </li>
+      <li>
+        So, how do these multiple chunks of javascript files determine when to
+        execute? They know it because of serialization
       </li>
     </ul>
   </article>
