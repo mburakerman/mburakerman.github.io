@@ -212,3 +212,54 @@ footer {
   height: 35px;
   cursor: pointer;
 }
+
+/** __BLOG__ **/
+.blog-article {
+  width: 100%;
+  max-width: 768px;
+}
+.blog-article time {
+  font-size: smaller;
+  opacity: 0.9;
+}
+.blog-article p {
+  font-size: 16px;
+}
+.blog-article h1 {
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+.blog-article h2 {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.blog-article a {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid;
+}
+.blog-article ul {
+  padding-left: 20px;
+}
+.blog-article ul li {
+  font-size: 16px;
+  list-style-type: disc;
+  margin-bottom: 10px;
+}
+.blog-article img {
+  height: 30px;
+  max-width: 60px;
+  object-fit: contain;
+  position: relative;
+  top: 8px;
+}
+.blog-article img:first-child {
+  margin-left: 15px;
+}
+.blog-article h4 {
+  margin-bottom: 10px;
+}
+.blog-article .credits li {
+  font-size: 13px;
+}
