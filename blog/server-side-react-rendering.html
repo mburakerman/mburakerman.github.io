@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#3C4556" />
+
+    <link rel="icon" type="image/png" href="/img/favicon.png" />
+
+    <title>Server Side React Rendering</title>
+
+    <meta
+      name="google-site-verification"
+      content="Y9rbVPxXYY8HNwYGvnqNGNC1Gku8Rp5Sn5F0eK7gl2Q"
+    />
+
+    <meta name="title" content="Server Side React Rendering" />
+    <meta
+      name="description"
+      content="Server-Side Rendering in React using Express"
+    />
+
+    <link rel="stylesheet" href="/css/main.css?v=2.27" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/gist-syntax-themes@1.1.0/stylesheets/cobalt.css"
+    />
+    <style>
+      .gist .gist-meta {
+        display: none !important;
+      }
+      .gist .pl-s .pl-s1 {
+        color: #fff !important;
+      }
+    </style>
+    <body>
+      <article class="blog-article">
+        <h1>Server Side React Rendering</h1>
+        <p><time>🗓️ 15 Feb 2023</time></p>
+
+        <br />
+        <p>
+          In order to understand server-side rendering in React, i created the
+          most basic example using <strong>Express</strong> and
+          <strong>Babel</strong>.
+        </p>
+
+        <p>Let's get started.</p>
+
+        <br />
+        <p>Our app's structure is going to be like this:</p>
+        <br />
+        <pre>
+react-ssr-example/
+├─ src/
+│  ├─ app.jsx
+├─ server.js
+├─ package.json
+      </pre
+        >
+
+        <p>
+          At first, we are going to download the <code>react</code>,
+          <code>react-dom</code>, <code>express</code> and
+          <code>nodemon</code> packages.
+        </p>
+
+        <br />
+        <p>
+          We also need to install <code>@babel/preset-react</code> to support
+          <code>.jsx</code> on Node and <code>@babel/register</code> to compile
+          <code>.jsx</code> on runtime, as <code>.jsx</code> files are not
+          natively supported by Node.
+        </p>
+
+        <br />
+        <p>
+          Our <code>server.js</code> now has a Babel config file at the top. The
+          rest is a basic Express app.
+        </p>
+        <br />
+        <p>
+          <code>createElement</code> creates react element from component.
+          <br />
+          <code>renderToString</code> renders react component to HTML string for
+          client.
+        </p>
+        <br />
+        <script src="https://gist.github.com/mburakerman/4e3e55e66ee0b2cf513d79670b140741.js"></script>
+
+        <br />
+
+        <p>
+          Finally, you can run <code>nodemon --ext jsx server.js</code> and have
+          a React SSR App up and running!
+        </p>
+
+        <br />
+        <br />
+      </article>
+    </body>
+  </head>
+</html>

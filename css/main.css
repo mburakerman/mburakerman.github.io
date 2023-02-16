@@ -2,6 +2,10 @@
   --mainColor: #282a36;
   --mainTextColor: #f2f2f2;
   --borderColor: rgba(255, 255, 255, 0.05);
+  --cyan: #8be9fd;
+  --pink: #ff79c6;
+  --orange: #ffb86c;
+  --purple: #bd93f9;
 }
 
 html {
@@ -247,19 +251,27 @@ footer {
   list-style-type: disc;
   margin-bottom: 10px;
 }
-.blog-article img {
-  height: 30px;
+.blog-article h2 img {
+  height: 20px;
   max-width: 60px;
   object-fit: contain;
   position: relative;
-  top: 8px;
+  top: 2px;
 }
-.blog-article img:first-child {
-  margin-left: 15px;
+.blog-article h2 img:first-child {
+  margin-left: 10px;
 }
 .blog-article h4 {
   margin-bottom: 10px;
 }
 .blog-article .credits li {
   font-size: 13px;
+}
+
+.blog-article pre {
+  font-size: 15px;
+}
+
+.blog-article p code {
+  color: var(--cyan);
 }
