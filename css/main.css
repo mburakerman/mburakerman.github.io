@@ -229,6 +229,9 @@ footer {
 .blog-article p {
   font-size: 16px;
 }
+.blog-article p img {
+  max-width: 100%;
+}
 .blog-article h1 {
   font-size: 26px;
   margin-bottom: 15px;
