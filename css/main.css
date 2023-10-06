@@ -72,12 +72,12 @@ html {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
 }
 @media screen and (max-width: 768px) {
   .landing h1 {
-    font-size: 26px;
+    font-size: 24px;
   }
   .landing span {
     font-size: 15px;
