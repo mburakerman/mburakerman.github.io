@@ -218,17 +218,17 @@ footer {
   opacity: 0.9;
 }
 .blog-article p {
-  font-size: 16px;
+  font-size: 15px;
 }
 .blog-article p img {
   max-width: 100%;
 }
 .blog-article h1 {
-  font-size: 26px;
+  font-size: 24px;
   margin-bottom: 15px;
 }
 .blog-article h2 {
-  font-size: 20px;
+  font-size: 18px;
   color: #fff;
   margin-bottom: 10px;
 }
@@ -241,7 +241,7 @@ footer {
   padding-left: 20px;
 }
 .blog-article ul li {
-  font-size: 16px;
+  font-size: 15px;
   list-style-type: disc;
   margin-bottom: 10px;
 }
