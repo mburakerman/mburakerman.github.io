@@ -61,20 +61,18 @@ html {
 }
 .landing h1 {
   position: relative;
-  text-align: center;
   color: #fff;
-  font-size: 34px;
+  font-size: 32px;
   font-weight: 600;
   width: 100%;
   margin: 0;
 }
 .landing span {
   display: block;
-  text-align: center;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 400;
 }
 @media screen and (max-width: 768px) {
@@ -94,17 +92,17 @@ section h2 {
   color: #fff;
   margin-bottom: 20px;
   border-bottom: 1px solid var(--borderColor);
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 500;
 }
 section h2 img {
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   margin-right: 10px;
 }
 section ul li {
   margin-bottom: 20px;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 300;
   position: relative;
   display: block;
@@ -120,13 +118,10 @@ section ul li:before {
 }
 @media screen and (max-width: 768px) {
   section h2 {
-    font-size: 20px;
+    font-size: 18px;
   }
   section h2 img {
     width: 25px;
-  }
-  section ul li {
-    font-size: 16px;
   }
 }
 
@@ -143,10 +138,6 @@ section ul li:before {
 .projects a:hover {
   color: var(--mainColor);
   background: #fff;
-}
-.projects sup {
-  font-size: 12px;
-  letter-spacing: normal;
 }
 .projects ul li img {
   width: 10px;
