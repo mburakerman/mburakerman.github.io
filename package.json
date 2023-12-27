@@ -1,22 +1,30 @@
 {
   "name": "mburakerman.github.io",
-  "version": "1.0.0",
-  "description": "> Personal Portfolio Website",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
   "scripts": {
-    "partytown": "partytown copylib public/~partytown"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "lint": "eslint . --ext .js,.ts,.astro",
+    "format": "prettier --write ."
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mburakerman/mburakerman.github.io.git"
-  },
-  "keywords": [],
-  "author": "mburakerman",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/mburakerman/mburakerman.github.io/issues"
-  },
-  "homepage": "https://github.com/mburakerman/mburakerman.github.io#readme",
   "dependencies": {
-    "@builder.io/partytown": "^0.7.4"
+    "@astrojs/tailwind": "^5.0.4",
+    "astro": "^4.0.7",
+    "lucide-astro": "^0.302.0",
+    "tailwindcss": "^3.4.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.10",
+    "@typescript-eslint/parser": "^6.15.0",
+    "eslint": "^8.56.0",
+    "eslint-plugin-astro": "^0.29.0",
+    "prettier": "^3.1.1",
+    "prettier-plugin-astro": "^0.12.2",
+    "typescript": "^5.3.3"
   }
 }

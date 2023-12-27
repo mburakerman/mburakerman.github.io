@@ -1,0 +1,19 @@
+---
+import Blog from "../../layouts/Blog.astro";
+
+const posts = await Astro.glob("./*.{md,mdx}");
+---
+
+<Blog title="Blog" description="Mehmet Burak Erman's Blog">
+  <ul class="blog-posts-list">
+    {
+      posts.map((p) => (
+        <li>
+          <a href={p.url} transition:name={p.frontmatter.title}>
+            {p.frontmatter.title}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</Blog>

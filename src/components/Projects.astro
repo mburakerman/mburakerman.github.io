@@ -1,0 +1,162 @@
+---
+import Subtitle from "./Subtitle.astro";
+import { ArrowUpRight } from "lucide-astro";
+
+const projects = [
+  {
+    title: "moonlightai",
+    link: "https://moonlightai.art/",
+    description: "AI Painting Generator.",
+  },
+  {
+    title: "Emoji Snake",
+    link: "https://emoji-snake.vercel.app/",
+    description: "A snake game.",
+  },
+  {
+    title: "react-sparkly-text",
+    link: "https://mburakerman.github.io/react-sparkly-text/",
+    description: "Sparkle your texts.",
+  },
+  {
+    title: "Reactplosive Modal",
+    link: "https://mburakerman.github.io/reactplosive-modal/",
+    description: "A simple React modal component with an explosion effect.",
+  },
+  {
+    title: "Mackernews",
+    link: "https://mburakerman.github.io/mackernews/",
+    description:
+      "A tiny Mac menu bar app that enables you to quickly access the latest and most popular Hacker News stories.",
+  },
+  {
+    title: "ColorToPng",
+    link: "https://mburakerman.github.io/colortopng/",
+    description: "Solid & Gradient PNG generator.",
+  },
+  {
+    title: "cambridge-cli",
+    link: "https://github.com/mburakerman/cambridge-cli/",
+    description: "Terminal dictionary for English learners.",
+  },
+  {
+    title: "Bongo Cat Typing",
+    link: "https://chromewebstore.google.com/detail/bongo-cat-typing/nejbhaabfihgocbacojonoekogiklfja",
+    description: "Let Bongo Cat accompany you while you are typing.",
+  },
+  {
+    title: "Twitter Trends",
+    link: "https://twitter-trends.vercel.app/",
+    description:
+      "Easily view Twitter trending topics and hashtags from a specific location using Google Maps. (Currently unavailable due to the new Twitter API policy)",
+  },
+  {
+    title: "HR.js",
+    link: "https://mburakerman.github.io/hrjs/",
+    description:
+      "Tiny JavaScript plugin for highlighting and replacing text in the DOM.",
+  },
+  {
+    title: "Numscrubber.js",
+    link: "https://mburakerman.github.io/numscrubberjs/",
+    description:
+      "Let's change values of input numbers by dragging the mouse left & right.",
+  },
+  {
+    title: "AI Profile Picture Maker",
+    link: "https://mburakerman.github.io/ai-profile-picture-maker/",
+    description: "An object detection app using Tensorflow.js.",
+  },
+  {
+    title: "Tensorflowjs Webcam Transfer Learning",
+    link: "https://mburakerman.github.io/tensorflowjs-webcam-transfer-learning/",
+    description: "Predict poses from a webcam using transfer learning.",
+  },
+  {
+    title: "Basic Login Page",
+    link: "https://codepen.io/mburakerman/full/VwLraqj/",
+    additionalLinks: [
+      "https://codepen.io/mburakerman/full/XWbaRGm/",
+      "https://mburakerman.github.io/badass-log-in-ui/",
+    ],
+    description: "Some intentionally bad user interfaces.",
+  },
+  // {
+  //   title: 'Toolgif',
+  //   link: 'https://mburakerman.github.io/toolgif/',
+  //   description: 'The only GIF tooltip plugin you need.'
+  // }, (Commented out due to absence of specific data)
+  {
+    title: "CSS3 Perspective Playground",
+    link: "https://codepen.io/mburakerman/full/wrZKwe/",
+    description: "Get a little perspective on your CSS.",
+  },
+];
+---
+
+<section class="mb-10">
+  <Subtitle title="Featured Projects" iconSrc="img/candies.svg" />
+
+  <ul
+    id="projectsList"
+    class="grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2"
+  >
+    {
+      projects.map(({ title, description, link }) => {
+        return (
+          <li class="_project-list-item_ rounded-lg bg-card text-card-foreground flex flex-col overflow-hidden border border-slate-700 border-muted p-3 relative ">
+            <div>
+              <a
+                href={link}
+                target="_blank"
+                rel="external"
+                class="text-slate-50 no-underline font-semibold tracking-tight text-base mb-3 flex items-center group max-w-[max-content]"
+              >
+                {title}{" "}
+                <ArrowUpRight class="w-4 h-4 ml-1 transition group-hover:translate-x-[2px] group-hover:translate-y-[-2px]" />
+              </a>
+              <p class="font-mono text-xs text-slate-400">{description}</p>
+            </div>
+          </li>
+        );
+      })
+    }
+  </ul>
+</section>
+
+<script is:inline>
+  document.addEventListener(
+    "astro:page-load",
+    () => {
+      const projectsListEl = document.getElementById("projectsList");
+
+      projectsListEl?.addEventListener("pointermove", (event) => {
+        const { x, y } = event;
+        projectsListEl.style.setProperty("--x", x.toString());
+        projectsListEl.style.setProperty("--y", y.toString());
+      });
+    },
+    { once: true },
+  );
+</script>
+
+<style>
+  ._project-list-item_:before {
+    content: "";
+    position: absolute;
+    inset: 0px;
+    background: radial-gradient(
+        at calc(var(--x) * 1px) calc(var(--y) * 1px),
+        hsl(0 0% 100% / 0.85),
+        transparent 15vmin
+      ),
+      transparent;
+    background-attachment: fixed;
+    mask:
+      linear-gradient(white, white) 50% 0 / 100% 1.5px no-repeat,
+      linear-gradient(white, white) 50% 100% / 100% 1.5px no-repeat,
+      linear-gradient(white, white) 0 50% / 1.5px 100% no-repeat,
+      linear-gradient(white, white) 100% 50% / 1.5px 100% no-repeat;
+    pointer-events: none;
+  }
+</style>

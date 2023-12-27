@@ -1,0 +1,31 @@
+---
+import Blog from "../components/Blog.astro";
+import Projects from "../components/Projects.astro";
+import Contact from "../components/Contact.astro";
+import Footer from "../components/Footer.astro";
+import Head from "../components/Head.astro";
+---
+
+<Head title="Mehmet Burak Erman - Frontend Developer" />
+
+<body>
+  <div
+    class="container relative mx-auto my-5 scroll-my-12 overflow-auto p-4 max-w-4xl"
+  >
+    <header class="mb-16">
+      <h1 class="text-2xl font-bold text-slate-50 mb-1">Mehmet Burak Erman</h1>
+      <span
+        class="max-w-md text-pretty font-mono text-sm text-slate-200 mb-5 inline-block"
+      >
+        Frontend Developer
+      </span>
+      <Contact />
+    </header>
+
+    <Blog />
+
+    <Projects />
+
+    <Footer />
+  </div>
+</body>
