@@ -1,0 +1,37 @@
+---
+import type { Frontmatter } from "../layouts/Blog.astro";
+import Subtitle from "./Subtitle.astro";
+import CandleHolderIcon from "./icons/CandleHolderIcon.astro";
+
+export type Props = {
+  title: string;
+  description: string;
+  frontmatter?: Frontmatter;
+  url: string;
+};
+
+const blogPosts = await Astro.glob<Props>("../pages/blog/*.{md,mdx}");
+---
+
+<section class="mb-10">
+  <Subtitle title="Blog">
+    <CandleHolderIcon />
+  </Subtitle>
+
+  <ul class="space-y-3 list-disc list-inside text-slate-50">
+    {
+      blogPosts.map((post) => {
+        return post.url ? (
+          <li transition:name={post?.frontmatter?.title}>
+            <a
+              href={post.url}
+              class="underline-offset-4 hover:underline text-sm font-mono"
+            >
+              {post?.frontmatter?.title}
+            </a>
+          </li>
+        ) : null;
+      })
+    }
+  </ul>
+</section>

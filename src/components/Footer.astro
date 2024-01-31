@@ -1,0 +1,22 @@
+---
+const currentYear = new Date().getFullYear();
+import HandIcon from "./icons/HandIcon.astro";
+---
+
+<footer
+  class="flex items-center justify-between text-xs text-slate-500 mt-28 py-4 border-solid border-t-[1px] border-slate-700 font-mono"
+>
+  <div class="transition hover:text-slate-300">
+    &copy;
+    <span>{currentYear}</span> Mehmet Burak Erman
+  </div>
+
+  <div>
+    <button
+      title="Scroll to top"
+      onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+    >
+      <HandIcon />
+    </button>
+  </div>
+</footer>

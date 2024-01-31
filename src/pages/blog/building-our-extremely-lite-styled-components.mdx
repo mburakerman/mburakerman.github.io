@@ -1,0 +1,156 @@
+---
+layout: ../../layouts/Blog.astro
+title: Building Our Extremely Lite styled-components
+description: Building Our Extremely Lite styled-components
+date: "29 Dec 2023"
+---
+
+`styled-components` is great when it comes to css-in-js solution. Now we will be doing **extremely basic** `styled-components` implementation to understand how it works.
+
+Let's start!
+
+An example `styled-components` usage is like below;
+
+```js
+const StyledButton = styled.button`
+  color: pink;
+`;
+```
+
+<br />
+<br />
+
+As you see `styled-components` using template literals to apply styles.
+
+**Template literals** allow us to call functions with backticks. Let's check what i mean below:
+For more: <em><a href="https://wesbos.com/tagged-template-literals" target="_blank" rel="noopener noreferrer">tagged-template-literals</a></em>
+
+```js
+const boo = (strings: TemplateStringsArray) => {
+  return strings[0];
+};
+
+boo`hello` // output: hello
+```
+
+<br />
+<br />
+
+Our first implementation is below. We have `tag` param which is our html tag, `strings` is used for template-literal styles and finally react element is created based on our `tag` & template-literal `strings`.
+
+We are also using `css2obj` helper function to convert css strings into javascript object.
+
+```js
+const styled = (tag) => {
+  return (strings) =>
+    ({ children }) => {
+      const cleanCss = strings[0].replace("\n", "");
+      const objCss = css2obj(cleanCss);
+
+      return React.createElement(tag, { style: { ...objCss } }, children);
+    };
+};
+
+const StyledButton = styled("button")`
+  color: pink;
+`;
+```
+
+<br />
+
+This works fine! But i don't want to use html tags as string here.
+
+<br />
+<br />
+
+So i changed code a bit. Now we seperated component generation into `generateComponent` function and looped through some predefined html tags to ensure type safety.
+
+```js
+const tags: Tag[] = ["div", "button", "span", "header"];
+
+function generateComponent(tag: Tag) {
+  return (strings: TemplateStringsArray) =>
+    ({ children }: StyledComponent) => {
+      const cleanCss = strings[0].replace("\n", "");
+      const objCss = css2obj(cleanCss);
+
+      return React.createElement(tag, { style: { ...objCss } }, children);
+    };
+}
+
+ const styled = Object.fromEntries(
+  tags.map((tag) => [tag, generateComponent(tag)]),
+)
+```
+
+<br />
+Now we can use it like below:
+
+```js
+const StyledButton = styled.button`
+  border: none;
+  border-radius: 4px;
+  background-color: pink;
+  color: #111;
+  padding: 3px 10px;
+  cursor: pointer;
+`;
+
+<StyledButton>💅🏻 Hello</StyledButton>;
+```
+
+<br />
+import {StyledButton} from "./our-styled-components";
+
+<StyledButton client:load>💅🏻 Hello</StyledButton>
+
+<br />
+<br />
+<br />
+
+<details style={{cursor: "pointer"}}>
+  <summary>Full Code 👇🏼</summary>
+  <p>
+  ```js
+  import React from "react";
+  import type { DetailedReactHTMLElement } from "react";
+
+  type StyledComponent = {
+    children: React.ReactNode;
+  };
+
+  type Tag = keyof JSX.IntrinsicElements;
+
+  type Styled = Record<
+    Tag,
+    (
+      strings: TemplateStringsArray,
+    ) => (props: StyledComponent) => DetailedReactHTMLElement<any, HTMLElement>
+  >;
+
+  const tags: Tag[] = ["div", "button", "span", "header"];
+
+  function generateComponent(tag: Tag) {
+    return (strings: TemplateStringsArray) =>
+      ({ children }: StyledComponent) => {
+        const cleanCss = strings[0].replace("\n", "");
+        const objCss = css2obj(cleanCss);
+
+        return React.createElement(tag, { style: { ...objCss } }, children);
+      };
+  }
+
+  export const styled = Object.fromEntries(
+    tags.map((tag) => [tag, generateComponent(tag)]),
+  ) as Styled;
+
+  const css2obj = (css: string) => {
+    const r = /(?<=^|;)\s*([^:]+)\s*:\s*([^;]+)\s*/g,
+      o: Record<string, string> = {};
+
+    css.replace(r, (m, p, v) => (o[p] = v));
+    return o;
+  };
+  ```
+  </p>
+</details>

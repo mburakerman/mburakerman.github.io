@@ -1,0 +1,131 @@
+---
+import { ViewTransitions } from "astro:transitions";
+
+export type Props = {
+  title: string;
+  description?: string;
+};
+
+const { title, description } = Astro.props;
+---
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#1b1d25" />
+  <link rel="icon" type="image/png" href="/img/favicon.ico" />
+  <meta name="generator" content={Astro.generator} />
+
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600&display=swap"
+  />
+
+  <title>{title}</title>
+
+  <ViewTransitions />
+
+  <meta
+    name="google-site-verification"
+    content="Y9rbVPxXYY8HNwYGvnqNGNC1Gku8Rp5Sn5F0eK7gl2Q"
+  />
+
+  <!-- Google Search Engine Tags -->
+  <meta
+    itemprop="name"
+    content={title || "Mehmet Burak Erman - Frontend Developer"}
+  />
+  <meta
+    itemprop="description"
+    content={description || "Mehmet Burak Erman - Frontend Developer"}
+  />
+  <meta itemprop="image" content="" />
+  <!-- Google Search Engine Tags -->
+
+  <!-- Facebook -->
+  <meta
+    property="og:title"
+    content={title || "Mehmet Burak Erman - Frontend Developer"}
+  />
+  <meta
+    property="og:description"
+    content={description || "Mehmet Burak Erman - Frontend Developer"}
+  />
+  <meta property="og:url" content="https://mburakerman.github.io/" />
+  <meta property="og:type" content="website" />
+  <!-- Facebook -->
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@mburakerman" />
+  <meta name="twitter:creator" content="@mburakerman" />
+  <meta
+    name="twitter:title"
+    content={title || "Mehmet Burak Erman - Frontend Developer"}
+  />
+  <meta
+    name="twitter:description"
+    content={description || "Mehmet Burak Erman - Frontend Developer"}
+  />
+  <!-- Twitter -->
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-75826567-5"
+  ></script>
+  <script>
+    // @ts-nocheck
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag("js", new Date());
+    gtag("config", "UA-75826567-5");
+  </script>
+
+  <!-- Yandex.Metrika counter -->
+  <script>
+    // @ts-nocheck
+    (function (m, e, t, r, i, k, a) {
+      m[i] =
+        m[i] ||
+        function () {
+          (m[i].a = m[i].a || []).push(arguments);
+        };
+      m[i].l = 1 * new Date();
+      (k = e.createElement(t)),
+        (a = e.getElementsByTagName(t)[0]),
+        (k.async = 1),
+        (k.src = r),
+        a.parentNode.insertBefore(k, a);
+    })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(49327489, "init", {
+      clickmap: true,
+      trackLinks: true,
+      accurateTrackBounce: true,
+      webvisor: true,
+    });
+  </script>
+  <noscript>
+    <div>
+      <img
+        src="https://mc.yandex.ru/watch/49327489"
+        style="position: absolute; left: -9999px"
+        alt=""
+      />
+    </div>
+  </noscript>
+</head>
+
+<style is:global>
+  :root {
+    --mainColor: #1b1d25;
+  }
+
+  body {
+    background-color: var(--mainColor);
+    font-family: "Montserrat", sans-serif;
+  }
+</style>

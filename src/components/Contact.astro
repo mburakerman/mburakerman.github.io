@@ -1,0 +1,53 @@
+---
+import { Github, Codepen, Mail, Twitter, Linkedin } from "lucide-astro";
+import BatsIcon from "./icons/BatsIcon.astro";
+---
+
+<section class="mb-10">
+  <div class="flex items-center text-slate-50 group">
+    <BatsIcon />
+    <a
+      href="https://github.com/mburakerman"
+      title="Github"
+      target="_blank"
+      rel="external"
+      class="p-1.5 transition-colors rounded-md border border-transparent hover:border-slate-700 flex"
+    >
+      <Github class="w-5 h-5" />
+    </a>
+    <a
+      href="https://codepen.io/mburakerman/"
+      title="Codepen"
+      target="_blank"
+      rel="external"
+      class="p-1.5 transition-colors rounded-md border border-transparent hover:border-slate-700 flex"
+    >
+      <Codepen class="w-5 h-5" />
+    </a>
+    <a
+      href="https://twitter.com/mburakerman"
+      title="Twitter"
+      target="_blank"
+      rel="external"
+      class="p-1.5 transition-colors rounded-md border border-transparent hover:border-slate-700 flex"
+    >
+      <Twitter class="w-5 h-5" />
+    </a>
+    <a
+      href="https://linkedin.com/in/mburakerman/"
+      title="Linkedin"
+      target="_blank"
+      rel="external"
+      class="p-1.5 transition-colors rounded-md border border-transparent hover:border-slate-700 flex"
+    >
+      <Linkedin class="w-5 h-5" />
+    </a>
+    <a
+      href="mailto:mburakerman@gmail.com"
+      title="Email"
+      class="p-1.5 transition-colors rounded-md border border-transparent hover:border-slate-700 flex"
+    >
+      <Mail class="w-5 h-5" />
+    </a>
+  </div>
+</section>
