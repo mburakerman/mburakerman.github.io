@@ -2,7 +2,7 @@
 import { ViewTransitions } from "astro:transitions";
 
 export type Props = {
-  title: string;
+  title?: string;
   description?: string;
 };
 
@@ -16,6 +16,8 @@ const { title, description } = Astro.props;
   <link rel="icon" type="image/png" href="/img/favicon.ico" />
   <meta name="generator" content={Astro.generator} />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600&display=swap"
@@ -33,11 +35,11 @@ const { title, description } = Astro.props;
   <!-- Google Search Engine Tags -->
   <meta
     itemprop="name"
-    content={title || "Mehmet Burak Erman - Frontend Developer"}
+    content={title || "Mehmet Burak Erman | Frontend Developer"}
   />
   <meta
     itemprop="description"
-    content={description || "Mehmet Burak Erman - Frontend Developer"}
+    content={description || "Mehmet Burak Erman | Frontend Developer"}
   />
   <meta itemprop="image" content="" />
   <!-- Google Search Engine Tags -->
@@ -45,11 +47,11 @@ const { title, description } = Astro.props;
   <!-- Facebook -->
   <meta
     property="og:title"
-    content={title || "Mehmet Burak Erman - Frontend Developer"}
+    content={title || "Mehmet Burak Erman | Frontend Developer"}
   />
   <meta
     property="og:description"
-    content={description || "Mehmet Burak Erman - Frontend Developer"}
+    content={description || "Mehmet Burak Erman | Frontend Developer"}
   />
   <meta property="og:url" content="https://mburakerman.github.io/" />
   <meta property="og:type" content="website" />
@@ -61,11 +63,11 @@ const { title, description } = Astro.props;
   <meta name="twitter:creator" content="@mburakerman" />
   <meta
     name="twitter:title"
-    content={title || "Mehmet Burak Erman - Frontend Developer"}
+    content={title || "Mehmet Burak Erman | Frontend Developer"}
   />
   <meta
     name="twitter:description"
-    content={description || "Mehmet Burak Erman - Frontend Developer"}
+    content={description || "Mehmet Burak Erman | Frontend Developer"}
   />
   <!-- Twitter -->
 
