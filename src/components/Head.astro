@@ -7,6 +7,8 @@ export type Props = {
 };
 
 const { title, description } = Astro.props;
+
+const DEFAULT_TITLE = "Mehmet Burak Erman | Frontend Developer";
 ---
 
 <head>
@@ -23,7 +25,7 @@ const { title, description } = Astro.props;
     href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600&display=swap"
   />
 
-  <title>{title}</title>
+  <title>{title ?? DEFAULT_TITLE}</title>
 
   <ViewTransitions />
 
@@ -33,26 +35,14 @@ const { title, description } = Astro.props;
   />
 
   <!-- Google Search Engine Tags -->
-  <meta
-    itemprop="name"
-    content={title || "Mehmet Burak Erman | Frontend Developer"}
-  />
-  <meta
-    itemprop="description"
-    content={description || "Mehmet Burak Erman | Frontend Developer"}
-  />
+  <meta itemprop="name" content={title ?? DEFAULT_TITLE} />
+  <meta itemprop="description" content={description ?? DEFAULT_TITLE} />
   <meta itemprop="image" content="" />
   <!-- Google Search Engine Tags -->
 
   <!-- Facebook -->
-  <meta
-    property="og:title"
-    content={title || "Mehmet Burak Erman | Frontend Developer"}
-  />
-  <meta
-    property="og:description"
-    content={description || "Mehmet Burak Erman | Frontend Developer"}
-  />
+  <meta property="og:title" content={title ?? DEFAULT_TITLE} />
+  <meta property="og:description" content={description ?? DEFAULT_TITLE} />
   <meta property="og:url" content="https://mburakerman.github.io/" />
   <meta property="og:type" content="website" />
   <!-- Facebook -->
@@ -61,14 +51,8 @@ const { title, description } = Astro.props;
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@mburakerman" />
   <meta name="twitter:creator" content="@mburakerman" />
-  <meta
-    name="twitter:title"
-    content={title || "Mehmet Burak Erman | Frontend Developer"}
-  />
-  <meta
-    name="twitter:description"
-    content={description || "Mehmet Burak Erman | Frontend Developer"}
-  />
+  <meta name="twitter:title" content={title ?? DEFAULT_TITLE} />
+  <meta name="twitter:description" content={description ?? DEFAULT_TITLE} />
   <!-- Twitter -->
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -79,6 +63,7 @@ const { title, description } = Astro.props;
     window.dataLayer = window.dataLayer || [];
 
     function gtag() {
+      // eslint-disable-next-line no-undef
       dataLayer.push(arguments);
     }
 
