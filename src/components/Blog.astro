@@ -18,14 +18,14 @@ const blogPosts = await Astro.glob<BlogPost>("../pages/blog/*.{md,mdx}");
     <CandleHolderIcon />
   </Subtitle>
 
-  <ul class="space-y-3 list-disc list-inside text-slate-50">
+  <ul class="list-inside list-disc space-y-3 text-slate-50">
     {
       blogPosts.map(({ url, frontmatter }) => {
         return url ? (
           <li transition:name={frontmatter?.title}>
             <a
               href={url}
-              class="underline-offset-4 hover:underline text-sm font-mono"
+              class="font-mono text-sm underline-offset-4 hover:underline"
             >
               {frontmatter?.title}
             </a>

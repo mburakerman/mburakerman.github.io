@@ -25,15 +25,15 @@ const projects = [
     description: "A simple React modal component with an explosion effect.",
   },
   {
+    title: "Bongo Cat Typing",
+    link: "https://chromewebstore.google.com/detail/bongo-cat-typing/nejbhaabfihgocbacojonoekogiklfja",
+    description: "Let Bongo Cat accompany you while you are typing.",
+  },
+  {
     title: "Mackernews",
     link: "https://mburakerman.github.io/mackernews/",
     description:
       "A tiny Mac menu bar app that enables you to quickly access the latest and most popular Hacker News stories.",
-  },
-  {
-    title: "ColorToPng",
-    link: "https://mburakerman.github.io/colortopng/",
-    description: "Solid & Gradient PNG generator.",
   },
   {
     title: "cambridge-cli",
@@ -41,21 +41,9 @@ const projects = [
     description: "Terminal dictionary for English learners.",
   },
   {
-    title: "Bongo Cat Typing",
-    link: "https://chromewebstore.google.com/detail/bongo-cat-typing/nejbhaabfihgocbacojonoekogiklfja",
-    description: "Let Bongo Cat accompany you while you are typing.",
-  },
-  {
-    title: "HR.js",
-    link: "https://mburakerman.github.io/hrjs/",
-    description:
-      "Tiny JavaScript plugin for highlighting and replacing text in the DOM.",
-  },
-  {
-    title: "Numscrubber.js",
-    link: "https://mburakerman.github.io/numscrubberjs/",
-    description:
-      "Let's change values of input numbers by dragging the mouse left & right.",
+    title: "ColorToPng",
+    link: "https://mburakerman.github.io/colortopng/",
+    description: "Solid & Gradient PNG generator.",
   },
   {
     title: "Tensorflowjs Webcam Transfer Learning",
@@ -86,16 +74,16 @@ const projects = [
     {
       projects.map(({ title, description, link }) => {
         return (
-          <li class="_project-list-item_ rounded-lg bg-card text-card-foreground flex flex-col overflow-hidden border border-slate-700 border-muted p-3 relative ">
+          <li class="_project-list-item_ bg-card text-card-foreground border-muted relative flex flex-col overflow-hidden rounded-lg border border-slate-700 p-3">
             <div>
               <a
                 href={link}
                 target="_blank"
                 rel="external"
-                class="text-slate-50 no-underline font-semibold tracking-tight text-base mb-3 flex items-center group max-w-[max-content]"
+                class="group mb-3 flex max-w-[max-content] items-center text-base font-semibold tracking-tight text-slate-50 no-underline"
               >
                 {title}{" "}
-                <ArrowUpRight class="w-4 h-4 ml-1 transition group-hover:translate-x-[2px] group-hover:translate-y-[-2px]" />
+                <ArrowUpRight class="ml-1 h-4 w-4 transition group-hover:translate-x-[2px] group-hover:translate-y-[-2px]" />
               </a>
               <p class="font-mono text-xs text-slate-400">{description}</p>
             </div>
