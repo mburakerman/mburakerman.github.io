@@ -17,6 +17,7 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+      - name: Setup Node
         uses: actions/setup-node@v3
       - name: Install, build, and upload site
         uses: withastro/action@v1
