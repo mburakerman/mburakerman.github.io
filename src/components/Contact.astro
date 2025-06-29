@@ -1,6 +1,7 @@
 ---
 import { Github, Codepen, Mail, Twitter, Linkedin } from "lucide-astro";
-import BatsIcon from "./icons/BatsIcon.astro";
+import BatsIcon from "@/components/icons/BatsIcon.astro";
+import AWSIcon from "@/components/icons/AWSIcon.astro";
 ---
 
 <section class="mb-10">
@@ -48,6 +49,15 @@ import BatsIcon from "./icons/BatsIcon.astro";
       class="flex rounded-md border border-transparent p-1.5 transition-colors hover:border-slate-700"
     >
       <Mail class="h-5 w-5" />
+    </a>
+    <a
+      href="https://www.credly.com/badges/ffa0ab0d-a204-4b0c-8098-f835bba2611b/"
+      title="AWS Certified Solutions Architect – Associate"
+      target="_blank"
+      rel="external"
+      class="flex rounded-md border border-transparent p-1.5 transition-colors hover:border-slate-700"
+    >
+      <AWSIcon />
     </a>
   </div>
 </section>
